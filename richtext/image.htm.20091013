@@ -1,0 +1,261 @@
+<HTML>
+<HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<TITLE>对象插入</TITLE>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+
+
+
+</HEAD>
+<BODY bgcolor="" >
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=10 align="center" style="padding-left:10px">
+  <TBODY>
+  <TR>
+    <TD align=middle colSpan=2>
+    <font class=title><span id='title'>Insert </span></font>
+    <hr width=100% >
+    Url: <INPUT id='path' size=20 value="http://">
+    </TD></TR>
+   <TR>
+    <TD align=middle>Width : &nbsp; &nbsp; <INPUT id='selrow' size=7 value=200 ONKEYPRESS="return IsDigit(event);" ></TD></TR>
+  <TR>
+    <TD>
+    <p align="center">Height: &nbsp; &nbsp; <INPUT id='selcol' size=7 value=200 ONKEYPRESS="return IsDigit(event);" ></TD>
+    <TR>
+    <TD>
+    <p align="center">Border: &nbsp; &nbsp; <INPUT id='selborder' size=7 value=1 ONKEYPRESS="return IsDigit(event);" ></TD>
+    <TR>
+    <TD>
+    <p align="center">Border_color: &nbsp; &nbsp; <INPUT id='selcolor' size=7 value='#D1E3F4'  ></TD>
+  <TR>
+    <TD align=middle colSpan=2>
+    <input id='Ok' type='button' value='Ok' onclick="retok();" />&nbsp; &nbsp;
+    <input onclick='window.close();' type='button' value='Cancel' /></TD></TR></TBODY></TABLE>
+</BODY></HTML>
+<script>
+var url=location.search;
+var Request = new Object();
+if(url.indexOf("?")!=-1){
+	var str = url.substr(1) //去掉?号
+	strs = str.split("&");
+	for(var i=0;i<strs.length;i++)
+	{
+		Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+	}
+}
+var win = window.dialogArguments;
+var iframeid=Request["iframeid"];
+
+var editor=win.document.getElementById(iframeid).contentWindow;
+
+
+var rng;	
+var txt="http://";
+var selection;
+var editor=win.document.getElementById(iframeid).contentWindow;
+if(win.isIE){
+
+    selection = editor.document.selection; 
+
+	if (selection != null) {
+		rng = selection.createRange();
+	}
+	var elm=rng.item?rng.item(0):rng.parentElement();
+	var p=elm;
+	/*while(p.tagName.toLowerCase()!='a'&&p.tagName.toLowerCase()!='body'){
+		p=p.parentNode;
+	}*/
+	if(p.tagName.toLowerCase()=='a'){
+		txt=p.innerHTML;
+	}else{
+
+		if(rng.text==""){
+
+		}else{
+			if(rng.item){
+		
+				txt=rng.item(0).outerHTML;
+			}else{
+				
+				txt=rng.htmlText;
+			}
+		}
+	}
+
+}
+else{
+	selection=editor.getSelection();
+	if(selection.rangeCount>0){
+		rng=selection.getRangeAt(0);
+	}
+
+	txt = rng;
+}
+
+if(txt.indexOf("<img")!=-1 ||txt.indexOf("<IMG")!=-1 ){
+	var re = new RegExp("src=['\"](.*)['\"]","ig");
+	if(re.exec(txt)){
+	   //s = "$1 contains: " + RegExp.$1 + "\n";
+	   var path=document.getElementById('path');
+	   path.value=RegExp.$1;
+	  }
+	  else{
+	  	txt="http://";
+	  }
+
+	  var re1 = new RegExp("HEIGHT:(.*?)px","ig");
+	if(re1.exec(txt)){
+
+	    var selcol=document.getElementById('selcol');
+	   selcol.value=RegExp.$1;
+	  }
+
+	  	  var re1 = new RegExp("WIDTH:(.*?)px","ig");
+	if(re1.exec(txt)){  
+		var selrow=document.getElementById('selrow');
+	   selrow.value=RegExp.$1;
+
+
+	  }
+
+}
+
+
+function IsDigit(eve)
+{
+	var e=window.event?window.event:eve;
+
+	var objEvent = e.target || e.srcElement;
+	var va=e.which||e.keyCode;
+  return ((va >= 48) && (va <= 57));
+}
+function returnHtml(content){
+
+	if(txt == "http://")
+	{	
+		var win = window.dialogArguments;
+		var iframeid=Request["iframeid"];
+	
+			
+		var content1=editor.document.body.innerHTML;	
+		content1=content1+content;
+		editor.document.body.innerHTML=content1;
+
+	
+	}
+	else{
+		var designEditorDoc=editor.document;
+		var win = window.dialogArguments;
+
+		if(win.isIE) {
+				var rng=designEditorDoc.selection.createRange();
+			if(designEditorDoc.selection.type.toLowerCase()=="control"){
+				try{
+					var tg=designEditorDoc.body.createTextRange();
+					tg.moveToElementText(rng.item(0));
+					rng=tg;
+				}catch(e){}
+			}
+		
+			rng.pasteHTML(content);
+				//var html = "<a href='" + $("linkpath").value + "' target='_blank'>" + $("linktext").value + "</a>";
+				
+				
+				rng.collapse(false);
+				rng.select();
+			
+		}
+		else {
+			editor.document.execCommand("inserthtml",null,content);
+		}
+	}
+	editor.focus();
+	window.close();
+	//txt=p.innerHTML;
+
+}
+function retok(){
+	alert('aaaaaaaaaaa');
+	var selrow=document.getElementById('selrow');
+	var selcol=document.getElementById('selcol');
+	var selborder=document.getElementById('selborder');
+	var selcolor=document.getElementById('selcolor');
+	var path=document.getElementById('path');
+	var selborder=selborder.value;
+	if (selborder==""){
+		selborder="";
+	}
+	else{
+
+		selborder="border:"+selborder+"px "+selcolor.value+" solid;"
+	}
+	var row=selrow.value;
+	if (row=="" || row==0) row=100;
+	var col=selcol.value;
+	if (col=="" || col==0) col=100;
+	var mypath=path.value;
+	if (mypath=="") {
+		alert("图片地址不能为空");
+		return;
+	}
+
+
+	
+	var string='';
+	switch(pageType){
+		case "image":
+		if(selrow.value!=0){
+			string='<img border="0" src="'+mypath+'" alt="" style="height:'+col+';width:'+row+';'+selborder+'"/>';
+		}
+		else{
+			string='<img border="0" src="'+mypath+'" alt="" style="'+selborder+'"/>';
+		}
+			break;
+		case "flash":
+			string="<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'  codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0' width="+row+" height="+col+"><param name=movie value="+mypath+"><param name=quality value=high><embed src="+mypath+" pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash' width="+row+" height="+col+"></embed></object>";
+			break;
+		case "wmv":
+			string="<embed src='"+ mypath+"' width="+ row +" height="+ col +" autostart=true loop=false></embed>";
+			break;
+		case "rm":
+			string="<object classid='clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA' width="+row+" height="+col+"><param name='CONTROLS' value='ImageWindow'><param name='CONSOLE' value='Clip1'><param name='AUTOSTART' value='-1'><param name=src value="+mypath+"></object><br><object classid='clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA'  width="+row+" height=60><param name='CONTROLS' value='ControlPanel,StatusBar'><param name='CONSOLE' value='Clip1'></object>";
+			break;
+
+
+			
+	}
+	returnHtml(string);
+}
+
+document.onkeydown=function()
+{
+    if (event.keyCode == 13)
+    {
+    
+       retok();
+    }
+  }
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	var pageType=Request["pageType"];
+var ti=document.getElementById('title');
+switch(pageType){
+	case "image":
+		ti.innerHTML="Insert Image";
+		break;
+	case "flash":
+		ti.innerHTML="Insert Flash";
+		break;
+	case "wmv":
+		ti.innerHTML="Insert wmv";
+		break;
+	case "rm":
+		ti.innerHTML="Insert rm";
+		break;
+		
+}
+//-->
+</SCRIPT>

@@ -1,0 +1,187 @@
+<?php
+require_once("plib/head.php");
+
+$cgi = getCGI();
+
+$p_id=  $cgi["_p_id"];
+$t_id = $cgi["t_id"];
+$setfrm = $cgi["_setfrm"];
+$action = $cgi["_action"];
+$remark = $cgi["remark"];
+$imgfile = $cgi["imgfile"];
+$ftype = $cgi["ftype"];
+
+
+if($p_id == "" || $setfrm == "") exit("Error parameter");
+
+if($action != "")
+{
+	conProjDB($p_id, $t_id);
+	
+	$file_path = $poly_data[1][file_path];
+	
+	$command = sprintf("mkdir -p %s/upload", $file_path);
+	system($command);
+	
+	$command = sprintf("mv /tmp/%s  %s/upload/", $imgfile != ""?$imgfile:"NULL", $file_path);
+	system($command);
+	
+	if($ftype ==  "file")
+	{
+		$filename = sprintf("/file_download.php?file=%s", urlencode($imgfile));
+	}
+	else
+	{
+		$filename = sprintf("%s/upload/%s", $poly_data[1][html_urlbase], $imgfile);
+	}
+	
+	$retlist = sprintf("<script type=text/javascript> returnValue('%s', '%s', '%s',%d); window.close(); </script>",
+		 $filename, $ftype, $remark, strlen($remark));
+}
+
+?>
+
+<html>
+<head>
+<title>GSPS file upload</title>
+<meta http-equiv="content-type" content="text/html;charset=<?php echo HTML_CHARSET; ?>">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<script LANGUAGE="javascript">
+<!--
+function openwin() {
+	window.open ("watermark.aspx", "newwindow", "height=536, width=321, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+     //写成一行
+}
+     
+function checkForm()
+{
+     	var file = document.form.imgfile.value;
+     	if (file == "")
+     	{
+     		alert("请选择文件！");
+     		return false;
+     	}
+     	return true;
+}
+
+String.prototype.replaceAll  = function(s1,s2)
+{
+	return this.replace(new RegExp(s1,"gm"),s2);   
+}  
+
+function returnValue(file_str, file_type, remark, ret1len)
+{
+
+
+	if(file_type == "image")
+	{
+	
+		if(ret1len == 0)
+		{
+			imgfile = file_str.replaceAll('%', '%25');
+			ret = "<img src="+ imgfile +" border=1>";
+		}
+		else
+		{
+			ret = "<div class=\"moduleSingleImg01\"><img src='" + file_str + "' border=1 alt='" + remark + "' \/><div style='font-size:12px'>" + remark + "<\/div> <\/div><p><\/p>";
+		}
+	}
+	else if(file_type == "flash")
+	{
+		var mypath = file_str.replaceAll('%', '%25');
+		row = 400;
+		col = 400;
+
+		ret = "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'  codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0' width="+row+" height="+col+"><param name=movie value="+mypath+"><param name=quality value=high><embed src="+mypath+" pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash' width="+row+" height="+col+"></embed></object>";
+
+	}
+	else if(file_type == "file")
+	{
+		ret = "<a href=\"" + file_str + "\">" + remark + "</a>";
+	}
+
+	var topWin;
+	var currentWin = self;
+	var parentWin = currentWin.opener;
+
+	//while(parentWin != null)
+	if(parentWin != null)
+	{
+		currentWin = parentWin;
+		parentWin = currentWin.opener;
+	}
+
+	topWin = currentWin;
+
+	var setfrm = eval("topWin.myform." + document.form._setfrm.value);
+	setfrm.value = ret;
+	setfrm.click();		
+}
+     
+     //-->
+</script>
+<link rel="stylesheet" href="css/file_upload.css" type="text/css">
+</head>
+<body>
+<form name="form" method="post" action="file_upload.php" id="form1" enctype="multipart/form-data">
+<input type="hidden" name="_action" value="upload">
+<input type="hidden" name="_p_id" value="<?php echo $p_id ?>">
+<input type="hidden" name="_setfrm" value="<?php echo $setfrm ?>">
+
+
+<table width=350 align=center cellspacing=0 cellpadding=0>
+<tr>
+<td class="mframe-t-left"></td>
+<td class="mframe-t-mid">
+	<span class="mframe-t-text">文件上传</span>
+</td>
+<td class="mframe-t-right"></td>
+</tr>
+</table>
+<table width=350 align=center cellspacing=0 cellpadding=0>
+<tr>
+<td class="mframe-m-left"></td>
+<td class="mframe-m-mid">
+	<table cellpadding=3 width="95%" align="center">
+	<tr><td align="right" colspan=2> &nbsp;</td></tr>
+	<tr><td align="right" valign=top >
+		&nbsp;&nbsp;&nbsp;&nbsp;文件类型：
+		</td>
+		<td>
+		<input type=radio name=ftype value="image" checked=true>图&nbsp;&nbsp;片
+		<input type=radio name=ftype value="flash">FLASH
+		<input type=radio name=ftype value="file">附&nbsp;&nbsp;件
+	</td></tr>
+	<tr><td align="right"> 选择上传文件：</td>
+	<td>
+		<input name="imgfile" id="imgfile" type="file" size="15" /> 
+	</td></tr>
+	<tr>
+		<td align=right>
+		备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注;：
+		</td>
+		<td><input type=text name=remark value="" size=26>
+		</td>
+	</tr>
+	<tr><td align="center" colspan=2>
+	<input type="submit" name="Submit" value="上 传" id="Submit" onClick="return checkForm()">
+	</td> </tr>
+	</table>	
+</td>
+<td class="mframe-m-right"></td>
+</tr>
+</table>
+<table width=350 align=center cellspacing=0 cellpadding=0 >
+<tr>
+<td class="mframe-b-left"></td>
+<td class="mframe-b-mid">&nbsp;</td>
+<td class="mframe-b-right"></td>
+</tr>
+</table>
+
+</form>
+
+<?php echo $retlist ?>
+</body>
+</html>

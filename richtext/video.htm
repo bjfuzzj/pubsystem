@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML>
+
+<HEAD>
+
+<TITLE>插入视频新闻链接代码</TITLE>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+
+<script type="text/javascript" src="http://sports.sina.com.cn/iframe/ad/video/15.js"></script>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<style type="text/css">
+	
+	.blkVideoLinkNews{float:left; width:128px; height:127px; overflow:hidden; margin:7px 18px 12px 0;}
+	.blkVideoLinkNews a{display:block; width:128px; height:127px; overflow:hidden; text-decoration:none;background:url(http://i0.sinaimg.cn/dy/deco/2008/0723/con_bg_standard_005.gif) no-repeat 0 0;}
+	.blkVideoLinkNews a:hover,.blkVideoLinkNews a:active{background-position:-150px 0px;}
+	.blkVideoLinkNews a img{display:block; padding:5px 5px 9px 4px; border:none; width:120px; height:90px;}
+	.blkVideoLinkNews a span{font-size:12px;display:block; line-height:20px; text-align:center;}
+	.blkVideoLinkNews a:hover span,.blkVideoLink a:active span{text-decoration:underline;}
+</style>
+
+<script language="javascript" >
+	
+/**
+* getImageFullPath
+* @param string vid
+* @param int order
+* @return string
+*/
+function getImageFullPath(vid, order) {
+	order = parseInt(order, 10);
+
+	if (order < 0) {	
+		order = 0;
+	}
+	if (order > 2) {
+		order = 2;
+	}
+	vid = parseInt(vid, 10);
+	if (vid <= 0) 
+	{
+		return "";
+	}
+	var basepath = getNewImagsPath(vid);
+
+	return basepath + vid + '_' + order + '.jpg';
+}
+/**
+* getOldImagsPath
+* @param int vid
+* @return string
+*/
+function getOldImagsPath(vid) {
+	var pidone = vid % 10;
+	var pid = vid % 100;
+	return "http://image2.sina.com.cn/kusou/v/" + pidone + "/" + $pid + "/" + $pid + "/";
+}
+/**
+* getNewImagsPath
+* @param int vid
+* @return string
+*/
+function getNewImagsPath(vid) {
+	var imd5 = hex_md5(vid.toString());	//@param string
+	var apath = twHash(imd5.substr(0, 16), 1024);
+	var bpath = twHash(imd5.substr(16), 1024);
+	return "http://p.v.iask.com/" + apath + "/" + bpath + "/";
+}
+
+/**
+* twHash
+* @param string str
+* @param int size
+* @return int
+*/
+function twHash(str, size) {
+	var b = new Array(0, 0, 0, 0);
+	var binstr = "";
+
+	for (var i=0; i<str.length; i++) {
+		b[i%4] ^= str.charCodeAt(i);
+	}
+
+	for (var i=0; i<4; i++) {
+		var tempbin = b[3-i].toString(2);
+		var temp0 = "";
+		for (var j=0; j<8-tempbin.length; j++) {
+			temp0 += "0";
+		}
+		tempbin = temp0 + tempbin;
+		binstr += tempbin;
+	}
+
+	var n =	parseInt(binstr, 2);
+	return n%size;
+}
+function showCusPic() {
+	var picUrl = document.getElementById("cus_pic").value;
+	var html = generateHtml(picUrl);
+	document.getElementById("cus_area").innerHTML = html;
+}
+
+function viewImage() {
+	var icon = document.getElementById("icon").value;
+	var h='<table><tr>';
+	for (var i=0; i<2; i++) {
+		h += "<td>" 
+			+ generateHtml(getImageFullPath(icon,i)) 
+			+ "</td>";
+	}
+	h += "<td align=left valign=top>使用自定义图片(<strong>尺寸:120*90px</strong>)<br>图片url: <br>";
+	h += "<input id='cus_pic' type=text value='http://'>&nbsp;<a onclick='showCusPic();return false' href='#'>预览</a><br><div id='cus_area'></div></td>";
+	h += "</tr><tr><td><input id='ok' type='button' value='插入代码' onclick='resteText(0);' /></td>"
+		+ "<td><input id='ok' type='button' value='插入代码' onclick='resteText(1);' /></td>"
+		+ "<td><input id='ok' type='button' value='插入代码' onclick='resteText(-1);' /></td></tr></table>";
+	
+	document.getElementById("preview").innerHTML = h;
+}
+	
+function generateHtml(imageUrl) {
+	var html = "";
+	var intro = document.getElementById("text").value;
+	var videoUrl = document.getElementById("video").value;
+	html += '<div class="blkVideoLinkNews"><a target="_blank" href="' + videoUrl + '">' 
+		+ '<img height="90" width="120" alt="' + intro + '" title="' + intro + '" src="' + imageUrl + '" />'
+		+ '<span>' + intro + '</span>'
+		+ '</a></div>';
+		
+	return html;
+	
+}
+/*
+*--------------- Read.htm -----------------
+* Request[key]
+* 功能:实现ASP的取得URL字符串,Request("AAA")
+* 参数:key,字符串.
+* 实例:alert(Request["AAA"])
+*--------------- Request.htm -----------------
+*/
+var url=location.search;
+var Request = new Object();
+if(url.indexOf("?")!=-1)
+{
+	var str = url.substr(1) //去掉?号
+	strs = str.split("&");
+	for(var i=0;i<strs.length;i++)
+	{
+		Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+	}
+}
+
+</script>
+
+<SCRIPT language=JavaScript>
+function resteText(index){
+	var icon=document.getElementById('icon').value;
+	var win = window.opener;//window.dialogArguments;
+	var iframeid=Request["iframeid"];
+
+	var editor=win.document.getElementById(iframeid).contentWindow;
+	var text = document.getElementById("text");
+	var video = document.getElementById("video");
+	if (text.value.length<1){
+		alert("请输入说明文字!");
+	}
+
+	else if (video.value.length<1){
+		alert("请输入视频链接!");
+	}else{
+		var string = "";
+		var wapbegin = "<span>&nbsp;</span><!--wapdump begin-->";
+		var wapend = "<!--wapdump end-->";
+		string += wapbegin;
+		if (index!=-1) string += generateHtml(getImageFullPath(icon,index));
+		else string += 	generateHtml(document.getElementById("cus_pic").value);
+
+		string += "<style type=\"text/css\">";
+		string += ".blkVideoLinkNews{float:left; width:128px; height:127px; overflow:hidden; margin:7px 18px 12px 0;}\n";
+		string += ".blkVideoLinkNews a{display:block; width:128px; height:127px; overflow:hidden; text-decoration:none;background:url(http://i0.sinaimg.cn/dy/deco/2008/0723/con_bg_standard_005.gif) no-repeat 0 0;}\n";
+		string += ".blkVideoLinkNews a:hover,.blkVideoLinkNews a:active{background-position:-150px 0px;}\n";
+		string += ".blkVideoLinkNews a img{display:block; padding:5px 5px 9px 4px; border:none; width:120px; height:90px;}\n";
+		string += ".blkVideoLinkNews a span{font-size:12px;display:block; line-height:20px; text-align:center;}\n";
+		string += ".blkVideoLinkNews a:hover span,.blkVideoLink a:active span{text-decoration:underline;}\n";
+		string += "</style>";
+		string += wapend;
+		//"<!--wapdump end-->\n";
+		//var unfmt = "{F6697EAD-AA32-4c68-8D84-1EFEC61A65B4}";
+		var unfmt ='';
+		if(win.isIE) {			
+			var oRng = editor.document.selection.createRange();
+			oRng.pasteHTML(unfmt + string);
+			oRng.collapse(false);
+			oRng.select();
+		}
+		else {
+			editor.document.execCommand("inserthtml",null,unfmt + string);
+		}
+		editor.document.body.innerHTML = editor.document.body.innerHTML.replace(unfmt, "");
+		editor.focus();
+		window.close();
+		//WBTB_InsertSymbol(frm, unfmt + string);
+		//editor.document.body.innerHTML = editor.document.body.innerHTML.replace(unfmt, "");
+
+	}
+}
+
+</SCRIPT>
+
+</HEAD>
+
+
+
+<BODY bgcolor="">
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=8 align=center style="padding-left:10px">
+
+	<TBODY>
+	<th colspan=2><font class=title>插入视频新闻链接代码</font></th>
+	<TR>
+		<td align="right" colspan=2>
+			<a href="../doc/htmleditor_insertvideo.htm" target="_blank">帮助</a>
+		</td>
+	</TR>
+	<tr><td colspan=2><hr width=100% ></td></tr>
+
+	<TR>
+
+		<TD align=left>
+			FLV ID: 
+		</TD>
+		<TD align=left>
+			<input id="icon" size=16 />
+		</TD>
+	</TR>
+
+	<TR>
+
+		<TD align=left>
+			说明文字: 
+		</TD>
+
+		<TD align=left>
+			<input id="text" size=25 value="点击观看本新闻视频">
+		</TD>
+	</TR>
+
+	<TR>
+
+		<TD align=left>
+			视频新闻链接: 
+		</TD>
+
+		<TD align=left>
+			<input id="video" size=60>
+		</TD>
+	</TR>
+
+	<TR>
+
+  	<TD align=center colSpan=2>
+
+  		<hr width=100% >
+			<input id='ok' type='button' value="预览截图" onclick="viewImage()" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input onclick='window.close();' type='button'  value='取消' />
+		</TD>
+
+	</TR>
+
+	</TBODY>
+
+</TABLE>
+
+<div id="preview" style="text-align:center"></div>
+
+</BODY>
+
+</HTML>
+
+
+
+

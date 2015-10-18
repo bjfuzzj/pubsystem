@@ -1,0 +1,366 @@
+<tr>
+<td valign=center>
+GHC_FIELD_CNAME<br>
+<SELECT name="StyleList_GHC_FIELD_NAME">
+<OPTION value="default" selected>默认样式</OPTION>
+<OPTION value="style1">样式1</OPTION>
+<OPTION value="style2">样式2</OPTION>
+</SELECT><br>
+<input type=button name="btn_StartPreview_GHC_FIELD_NAME" value="开始排版" onClick="On_Text_TypesetClick(myform, this, myform['_FORM_PF_GHC_FIELD_NAME'], myform['StyleList_GHC_FIELD_NAME']);">
+
+</td>
+<td nowrap>
+
+
+
+<script LANGUAGE="JavaScript">
+var WBTB_bTextMode_GHC_FIELD_NAME=true;
+</script>
+
+<input type="hidden" name="Body" id="Body" value="">
+
+
+
+
+<table ID='WBTB_Container_GHC_FIELD_NAME' class="WBTB_Body" style="display:none" width=550 height=300 cellpadding=3 cellspacing=0 border=0>
+<tr id="WBTB_Toolbars">
+<td>
+<table cellpadding=0 cellspacing=0 border=0>
+<tr id="yToolbar" class="yToolbar">
+<td>
+<select ID="WBTB_formatSelect" class="WBTB_TBGen" onchange="WBTB_doSelectClick('FormatBlock',this,WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME')">
+	<option class="heading" selected>段落格式</option>
+	<option VALUE="&lt;P&gt;">Normal
+	<option VALUE="&lt;H1&gt;">Heading 1
+	<option VALUE="&lt;H2&gt;">Heading 2
+	<option VALUE="&lt;H3&gt;">Heading 3
+	<option VALUE="&lt;H4&gt;">Heading 4
+	<option VALUE="&lt;H5&gt;">Heading 5
+	<option VALUE="&lt;H6&gt;">Heading 6
+	<option VALUE="&lt;H7&gt;">Heading 7
+	<option VALUE="&lt;PRE&gt;">Formatted
+	<option VALUE="&lt;ADDRESS&gt;">Address
+</select>
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="字体颜色" LANGUAGE="javascript" onclick="WBTB_foreColor(WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" src="richtext/images/fgcolor.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn">
+<img class="WBTB_Ico" title="字体背景颜色" LANGUAGE="javascript" onclick="WBTB_backColor(WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" src="richtext/images/fbcolor.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td>
+<select language="javascript" class="WBTB_TBGen" id="FontName" onfocus="this.selectedIndex=0;" onchange="WBTB_format('fontname',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME',this[this.selectedIndex].value);"> 
+<option class="heading" selected>字体
+<option value="宋体">宋体
+<option value="黑体">黑体
+<option value="Microsoft YaHei">微软雅黑
+<option value="楷体_GB2312">楷体
+<option value="仿宋_GB2312">仿宋
+<option value="隶书">隶书
+<option value="幼圆">幼圆
+<option value="新宋体">新宋体
+<option value="细明体">细明体
+<option value="Arial">Arial
+<option value="Arial Black">Arial Black
+<option value="Arial Narrow">Arial Narrow
+<option value="Bradley Hand ITC">Bradley Hand ITC
+<option value="Brush Script	MT">Brush Script MT
+<option value="Century Gothic">Century Gothic
+<option value="Comic Sans MS">Comic Sans MS
+<option value="Courier">Courier
+<option value="Courier New">Courier New
+<option value="MS Sans Serif">MS Sans Serif
+<option value="Script">Script
+<option value="System">System
+<option value="Times New Roman">Times New Roman
+<option value="Viner Hand ITC">Viner Hand ITC
+<option value="Verdana">Verdana
+<option value="Wide Latin">Wide Latin
+<option value="Wingdings">Wingdings</option>
+</select>
+<select language="javascript" class="WBTB_TBGen" id="FontSize" onfocus="this.selectedIndex=0;" onchange="WBTB_FontSize(WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME',this[this.selectedIndex].value);">
+<option class="heading" selected>字号
+<option value="1">11px</option>
+<option value="2">12px</option>
+<option value="3">14px</option>
+<option value="4">16px</option>
+<option value="5">18px</option>
+<option value="6">24px</option>
+<option value="7">36px</option>
+</select>
+<select class="WBTB_TBGen" onchange="WBTB_InsertSymbol('WBTB_Composition_GHC_FIELD_NAME',this[this.selectedIndex].innerText);this.selectedIndex=0;">
+<option class="heading" selected>符号</option>
+<option value="&amp;#162;">&#162;</option>
+<option value="&amp;#163;">&#163;</option>
+<option value="&amp;#165;">&#165;</option>
+<option value="&amp;#166;">&#166;</option>
+<option value="&amp;#169;">&#169;</option>
+<option value="&amp;#174;">&#174;</option>
+<option value="&amp;#176;">&#176;</option>
+<option value="&amp;#177;">&#177;</option>
+<option value="&amp;#183;">&#183;</option>
+<option value="&amp;#171;">&#171;</option>
+<option value="&amp;#187;">&#187;</option>
+<option value="&amp;#188;">&#188;</option>
+<option value="&amp;#189;">&#189;</option>
+<option value="&amp;#190;">&#190;</option>
+<option value="&amp;#247;">&#247;</option>
+<option value="&amp;#8224;">&#8224;</option>
+<option value="&amp;#8225;">&#8225;</option>
+<option value="&amp;#8364;">&#8364;</option>
+<option value="&amp;#8482;">&#8482;</option>
+</select>
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" TITLE="alt" LANGUAGE="javascript" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" onclick="WBTB_replace('WBTB_Composition_GHC_FIELD_NAME')" src="richtext/images/replace.gif" WIDTH="16" HEIGHT="16"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="上传文件" LANGUAGE="javascript" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" onclick="OpenUpload('file_upload.php?p_id=GHC_P_ID&t_id=GHC_T_ID',document.myform.p_id.value,'setFrm_GHC_FIELD_NAME');" src="richtext/images/upload.gif" WIDTH="16" HEIGHT="16"></td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<!-- img class="WBTB_Ico" title="清理代码" LANGUAGE="javascript" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" onclick="WBTB_CleanCode('WBTB_Composition_GHC_FIELD_NAME')" src="richtext/images/cleancode.gif" WIDTH="16" HEIGHT="16" --></td>
+<td class="WBTB_Btn">
+<!-- img class="WBTB_Ico"  title="帮助" LANGUAGE="javascript" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" onclick="WBTB_help();" src="richtext/images/help.gif" WIDTH="16" HEIGHT="16" unselectable="on" -->
+</td>
+</tr>
+</table>
+
+
+<table cellpadding=0 cellspacing=0 >
+<tr id="yToolbar" class="yToolbar">
+<td class="WBTB_Btn">
+<img  title="全选" LANGUAGE="javascript" onclick="WBTB_format1('selectAll','WBTB_Composition_GHC_FIELD_NAME');" class="WBTB_Ico" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/selectAll.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img title="剪切" LANGUAGE="javascript" onclick="WBTB_format1('cut','WBTB_Composition_GHC_FIELD_NAME');" class="WBTB_Ico" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/cut.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img title="复制" LANGUAGE="javascript" onclick="WBTB_format1('copy','WBTB_Composition_GHC_FIELD_NAME');" class="WBTB_Ico" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/copy.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn">
+<img  title="粘贴" LANGUAGE="javascript"  onclick="WBTB_format1('paste','WBTB_Composition_GHC_FIELD_NAME');" class="WBTB_Ico" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/paste.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn"  >
+<img title="撤消" LANGUAGE="javascript" onclick="WBTB_format1('undo','WBTB_Composition_GHC_FIELD_NAME');" class="WBTB_Ico" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/undo.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico"  title="恢复" LANGUAGE="javascript" onclick="WBTB_format1('redo','WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/redo.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入表格" LANGUAGE="javascript" onclick="WBTB_fortable(WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/table.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico"  title="插入行" LANGUAGE="javascript" onclick="WBTB_InsertRow('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/insertrow.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="删除行" LANGUAGE="javascript" onclick="WBTB_DeleteRow('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/deleterow.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入列" LANGUAGE="javascript"  onclick="WBTB_InsertColumn('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/insertcolumn.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td class="WBTB_Btn">
+<img class="WBTB_Ico"  title="删除列" LANGUAGE="javascript" onclick="WBTB_DeleteColumn('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/deletecolumn.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入超级链接" LANGUAGE="javascript"  onclick="WBTB_forhl('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/wlink.gif" WIDTH="18" HEIGHT="18" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="去掉超级链接" LANGUAGE="javascript" onclick="WBTB_format1('Unlink','WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/unlink.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+
+
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入图片" LANGUAGE="javascript"  onclick="WBTB_UserDialog('InsertImage',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/img.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入水平线" LANGUAGE="javascript" onclick="WBTB_format('InsertHorizontalRule',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/hr.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn">
+<img class="WBTB_Ico"  title="插入Flash" LANGUAGE="javascript"  onclick="WBTB_forswf('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/swf.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入Windows Media" LANGUAGE="javascript" onclick="WBTB_forwmv('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/wmv.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入Real Media" LANGUAGE="javascript"  onclick="WBTB_forrm('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/rm.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+</tr>
+</table>
+<table cellpadding=0 cellspacing=0>
+<tr id="yToolbar" class="yToolbar">
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="加粗" LANGUAGE="javascript"  onclick="WBTB_format('bold',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/bold.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="斜体" LANGUAGE="javascript" onclick="WBTB_format('italic',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/italic.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="下划线" LANGUAGE="javascript" onclick="WBTB_format('underline',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/underline.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="上标" LANGUAGE="javascript"  onclick="WBTB_format('superscript',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/superscript.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="下标" LANGUAGE="javascript"  onclick="WBTB_format('subscript',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/subscript.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="删除线" LANGUAGE="javascript" onclick="WBTB_format('strikethrough',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/strikethrough.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn">
+<img class="WBTB_Ico"  title="取消格式" LANGUAGE="javascript" onclick="WBTB_format1('RemoveFormat','WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/removeformat.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="左对齐" NAME="Justify" LANGUAGE="javascript"  onclick="WBTB_format('justifyleft',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/aleft.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="居中" NAME="Justify" LANGUAGE="javascript"  onclick="WBTB_format('justifycenter',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/center.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn"  >
+<img class="WBTB_Ico" title="右对齐" NAME="Justify" LANGUAGE="javascript" onclick="WBTB_format('justifyright',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/aright.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico"  title="编号" LANGUAGE="javascript" onclick="WBTB_format('insertorderedlist',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/numlist.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="项目符号" LANGUAGE="javascript" onclick="WBTB_format('insertunorderedlist',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/bullist.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" LANGUAGE="javascript" >
+<img class="WBTB_Ico" title="减少缩进量"  onclick="WBTB_format('outdent',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/outdent.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="增加缩进量" LANGUAGE="javascript" onclick="WBTB_format('indent',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/indent.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+<td><img src="richtext/images/separator.gif"></td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入引用" LANGUAGE="javascript" onclick="WBTB_specialtype('WBTB_Composition_GHC_FIELD_NAME','<div class=quote>','</div>')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/quote.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入代码" LANGUAGE="javascript" onclick="WBTB_code('WBTB_Composition_GHC_FIELD_NAME')" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/code.gif" WIDTH="16" HEIGHT="16">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入视频播放代码" LANGUAGE="javascript" onclick="WBTB_InsertVideo('WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/video.gif" WIDTH="21" HEIGHT="12" unselectable="on">
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入分页" LANGUAGE="javascript" onclick="WBTB_InsertPage('WBTB_Composition_GHC_FIELD_NAME');" onmouseover="this.className= 'WBTB_Ico_Hover'; " class="WBTB_Ico"  onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';"  src="richtext/images/insertpage.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+</tr>
+</table>
+
+
+
+
+<table cellpadding=0 cellspacing=0>
+<tr id="yToolbar" class="yToolbar">
+<script language="javascript">
+var tagArray_GHC_FIELD_NAME = new Array();
+tagArray_GHC_FIELD_NAME[0] = new Array(2);
+tagArray_GHC_FIELD_NAME[0][0] = "<!--wapdump begin-->";
+tagArray_GHC_FIELD_NAME[0][1] = "<!--wapdump end-->";
+
+</script>
+<td>
+<select class="WBTB_TBGen" id="tag_GHC_FIELD_NAME" onchange="WBTB_InsertTag('WBTB_Composition_GHC_FIELD_NAME',tagArray_GHC_FIELD_NAME,this.value,false,0);">
+<option value="0">&lt;!--wapdump begin--&gt ... &lt;!--wapdump end--&gt;</option>
+
+</select>
+</td>
+<td class="WBTB_Btn" >
+<img class="WBTB_Ico" title="插入标记" LANGUAGE="javascript" onmouseover="this.className= 'WBTB_Ico_Hover'; " onmouseout="this.className='WBTB_Ico';" onmousedown="this.className='WBTB_Ico_Down';" onmouseup="this.className='WBTB_Ico_Hover';" onclick="WBTB_InsertTag('WBTB_Composition_GHC_FIELD_NAME',tagArray_GHC_FIELD_NAME,myform.tag_GHC_FIELD_NAME.value,false,1);" src="richtext/images/inserttag.gif" WIDTH="16" HEIGHT="16" unselectable="on">
+</td>
+</tr>
+</table>
+
+</td></tr>
+
+<tr><td height="100%">
+<input type="hidden" id="richtext" name="richtext">
+<iframe class="WBTB_Composition" ID="WBTB_Composition_GHC_FIELD_NAME" MARGINHEIGHT="5" MARGINWIDTH="5" width="100%" height="100%"></iframe>
+<input type=button name="setFrm_GHC_FIELD_NAME" value='' onclick="WBTB_InsertImageTag('WBTB_Composition_GHC_FIELD_NAME',this);" style="display:none;">
+</td></tr>
+
+<tr><td></td></tr>
+</table>
+
+<script language="javascript">WBTB_InitDocument('Body','GB2312',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');</script>
+
+
+<script language="javascript">				
+
+if (isIE) 
+{
+	document.getElementById("WBTB_Composition_GHC_FIELD_NAME").attachEvent("onblur",function(){WBTB_CopyData('WBTB_Composition_GHC_FIELD_NAME', document.myform.elements['_FORM_PF_GHC_FIELD_NAME']);});
+} 
+else 
+{
+	document.getElementById("WBTB_Composition_GHC_FIELD_NAME").contentDocument.addEventListener("blur", function(){WBTB_CopyData('WBTB_Composition_GHC_FIELD_NAME', document.myform.elements['_FORM_PF_GHC_FIELD_NAME']);}, true);
+}
+
+function ClientValidate(source, arguments)
+{
+	if (arguments.Value.length>250)
+		arguments.IsValid=false;
+	else
+		arguments.IsValid=true;
+}
+			
+</script>
+
+
+
+
+
+
+<table width=100% height=100% cellpadding=3 cellspacing=0 border=0><tr><td>
+
+<TEXTAREA NAME="GHC_FIELD_NAME" COLS="80" ROWS="16" id="_FORM_PF_GHC_FIELD_NAME">
+GHC_FIELD_VALUE
+</TEXTAREA>
+
+<INPUT TYPE="HIDDEN" NAME="_FORM_VF__NOTNULL_GHC_FIELD_NAME" VALUE="FALSE">
+<INPUT TYPE="HIDDEN" NAME="_FORM_VF__MIN_LENGTH_GHC_FIELD_NAME" VALUE="0">
+<INPUT TYPE="HIDDEN" NAME="_FORM_VF__MAX_LENGTH_GHC_FIELD_NAME" VALUE="0">
+<INPUT TYPE="HIDDEN" NAME="_FORM_VF__FTR_GHC_FIELD_NAME" VALUE="Text">
+<INPUT TYPE="HIDDEN" NAME="_FORM_FCR_GHC_FIELD_NAME" VALUE="正文">
+<INPUT TYPE="HIDDEN" NAME="_FORM_AP_GHC_FIELD_NAME" VALUE="Article.Content">
+
+
+</td></tr>
+</table>
+
+
+<table cellpadding=0 cellspacing=0 border=0 width='350'>
+<tr>
+	<td width='10'>&nbsp;</td>
+	<td class="WBTB_TabOn" id='WBTB_TabHtml_GHC_FIELD_NAME' onclick="if (!WBTB_bTextMode_GHC_FIELD_NAME) {WBTB_bTextMode_GHC_FIELD_NAME=!WBTB_bTextMode_GHC_FIELD_NAME; WBTB_setMode(myform['_FORM_PF_GHC_FIELD_NAME'],'WBTB_Container_GHC_FIELD_NAME','WBTB_TabHtml_GHC_FIELD_NAME','WBTB_TabDesign_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');}" unselectable="on" width='60'>
+		<img unselectable="on" SRC="richtext/images/mode.html.gif" ALIGN="absmiddle" width=21 height=20> 源码
+	</td>
+	<td style="width:10px"></td>
+	<td class="WBTB_TabOff" id='WBTB_TabDesign_GHC_FIELD_NAME' onclick="if (WBTB_bTextMode_GHC_FIELD_NAME) {WBTB_bTextMode_GHC_FIELD_NAME=!WBTB_bTextMode_GHC_FIELD_NAME; WBTB_setMode(myform['_FORM_PF_GHC_FIELD_NAME'],'WBTB_Container_GHC_FIELD_NAME','WBTB_TabHtml_GHC_FIELD_NAME','WBTB_TabDesign_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');}" unselectable="on" width='60'>
+		<img unselectable="on" SRC="richtext/images/mode.design.gif" ALIGN="absmiddle" width=21 height=20> 设计
+	</td>
+	<td style="width:10px"></td>
+	<td class="WBTB_TabOff" id="WBTB_TabView" onclick="if (WBTB_bTextMode_GHC_FIELD_NAME) {WBTB_bTextMode_GHC_FIELD_NAME=!WBTB_bTextMode_GHC_FIELD_NAME; WBTB_setMode(myform['_FORM_PF_GHC_FIELD_NAME'],'WBTB_Container_GHC_FIELD_NAME','WBTB_TabHtml_GHC_FIELD_NAME','WBTB_TabDesign_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME'); } WBTB_View('WBTB_Composition_GHC_FIELD_NAME');" unselectable="on" width='60'>
+		<img unselectable="on" SRC="richtext/images/mode.view.gif" ALIGN="absmiddle" width=21 height=20> 查看
+	</td>
+	<td align='right'  width='70'>
+		<a href="javascript:WBTB_Size(-300,'WBTB_Container_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME)" title="减小编辑区域"><img src="richtext/images/minus.gif" unselectable="on" border='0'></a> <a href="javascript:WBTB_Size(300,'WBTB_Container_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME)" title="增大编辑区域"><img src="richtext/images/plus.gif" unselectable="on" border='0'></a>
+	</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+if (WBTB_bTextMode_GHC_FIELD_NAME)
+{
+	WBTB_bTextMode_GHC_FIELD_NAME=!WBTB_bTextMode_GHC_FIELD_NAME;
+	WBTB_setMode(myform['_FORM_PF_GHC_FIELD_NAME'],'WBTB_Container_GHC_FIELD_NAME','WBTB_TabHtml_GHC_FIELD_NAME','WBTB_TabDesign_GHC_FIELD_NAME',WBTB_bTextMode_GHC_FIELD_NAME,'WBTB_Composition_GHC_FIELD_NAME');
+}
+</script>
+
+
+</td>
+</tr>

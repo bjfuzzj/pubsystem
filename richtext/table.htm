@@ -1,0 +1,248 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Insert Table</TITLE>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<Link rel="stylesheet" type="text/css" href="pop.css">
+
+
+
+<script>
+
+
+function IsDigit(eve)
+
+{
+	var e=window.event?window.event:eve;
+
+	var objEvent = e.target || e.srcElement;
+	var va=e.which||e.keyCode;
+
+  return ((va >= 48) && (va <= 57));
+
+}
+
+function WBTB_selColor(obj_id)
+
+{
+	WBTB_showdlg("selcolor_table.htm",obj_id,300,270)
+
+
+}
+
+function WBTB_showdlg(win_url,frm,win_width,win_height){
+	var isIE=false;
+	var userAgent = navigator.userAgent.toLowerCase();
+	if ((userAgent.indexOf('msie') != -1) && (userAgent.indexOf('opera') == -1)) {
+		isIE = true;
+	}
+	
+	if(isIE){
+		var arg = new Array();
+		var arr = showModalDialog(win_url+"?id="+frm, window, "dialogWidth:"+win_width+"px;dialogHeight:"+win_height+"px;status:no;scroll:no;help:no");
+	}
+	else{
+		var win = window.open(win_url+"?id="+frm, '_blank', "Width="+win_width+",Height="+win_height);
+		win.dialogArguments = window;
+	}
+}
+
+</script>
+
+</HEAD>
+
+
+
+<BODY bgcolor="">
+
+
+
+<table border="0" height="90%" cellspacing="2" cellpadding="0" align=center style="padding-left:10px">
+
+<tr>
+
+	<td colspan=2 align=center>
+
+	<font class=title>Insert Table</font>
+
+	<hr width=100% >
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td align=center>
+
+	Rows: <INPUT TYPE=TEXT SIZE=4 ID=selrow ONKEYPRESS="return IsDigit(event);"  value=2>
+
+	</td>
+
+	<td align=center>
+
+	&nbsp; Cols: &nbsp; <input type=text id=selcol size=4 ONKEYPRESS="return IsDigit(event);"  value=2>
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td>
+
+	Width: <INPUT TYPE=TEXT SIZE=4 ID=tbwidth ONKEYPRESS="return IsDigit(event);" value=550>
+
+	</td>
+
+	<td>
+
+	Border: <INPUT TYPE=TEXT SIZE=4 ID=tbborder ONKEYPRESS="return IsDigit(event);" value=0>
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td colspan=2>
+
+	<hr width=100% >
+
+	Cellpadding: <INPUT TYPE=TEXT SIZE=7 ID=celpadding  ONKEYPRESS="return IsDigit(event);" value="1">
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td colspan=2>
+
+	<a href="javascript:void(0);" onclick="WBTB_selColor('bdcolor');">BorderColor</a>: <INPUT TYPE=TEXT SIZE=7 ID='bdcolor' value="#FFFFFF">
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td colspan=2>
+
+	<a href="javascript:void(0);" onclick="WBTB_selColor('bgcolor');">BackColor</a>: &nbsp; &nbsp;<INPUT TYPE=TEXT SIZE=7 ID='bgcolor' value="#C2D9F2">
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td colspan=2>
+
+	Align: &nbsp; 
+
+	<select id=tbalign >
+
+	<option value=center>Center</option>
+
+	<option value=left>Left</option>
+
+	<option value=right>Right</option>
+
+	</select>
+
+	</td>
+
+</tr>
+
+<tr>
+
+	<td colspan=2 align=center>
+
+	<hr width=100% >
+
+		<input id='ok' type='button' value="ok" onclick="resteText();" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input onclick='window.close();' type='button'  value='Cancel' />
+
+	</td>
+
+</tr>
+
+</table>
+
+
+
+</BODY>   
+
+</HTML>
+<script language="javascript" >
+
+var url=location.search;
+var Request = new Object();
+if(url.indexOf("?")!=-1){
+	var str = url.substr(1) //去掉?号
+	strs = str.split("&");
+	for(var i=0;i<strs.length;i++)
+	{
+		Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+	}
+}
+
+function returnHtml(content){
+	var win = window.dialogArguments;
+	var iframeid=Request["iframeid"];
+	var editor=win.document.getElementById(iframeid).contentWindow;
+	if(win.isIE) {			
+			var oRng = editor.document.selection.createRange();
+			oRng.pasteHTML(content);
+			oRng.collapse(false);
+			oRng.select();
+		}
+		else {
+			editor.document.execCommand("inserthtml",null,content);
+		}
+		editor.focus();
+		window.close();
+}
+
+function resteText(){
+	var selrow=document.getElementById('selrow');
+	var selcol=document.getElementById('selcol');
+	var tbwidth=document.getElementById('tbwidth');
+	var tbborder=document.getElementById('tbborder');
+	var celpadding=document.getElementById('celpadding');
+	var bdcolor=document.getElementById('bdcolor');
+	var bgcolor=document.getElementById('bgcolor');
+	var tbalign=document.getElementById('tbalign');
+	row=selrow.value;
+	if (row=="") row=1;
+	col=selcol.value;
+	if (col=="") col=1;
+	tbwidth=tbwidth.value;
+	if (tbwidth=="") tbwidth=500;
+	tbborder=tbborder.value;
+	if (tbborder=="") tbborder=1;
+	celpadding=celpadding.value;
+	if (celpadding=="") celpadding=2;
+	bdcolor=bdcolor.value ;
+	if (bdcolor=="") bdcolor="#CCCCCC";
+	bgcolor= bgcolor.value;
+	if (bgcolor=="") bgcolor="#FFFFFF";
+	tbalign=tbalign.value;
+	if (tbalign=="") tbalign="center";
+	var string;
+	string="<table border="+ tbborder +" cellspacing=0 width="+tbwidth+" cellpadding="+ celpadding +" align="+tbalign+" bgcolor='"+ bgcolor +"' bordercolor="+ bdcolor +" style='border-collapse:collapse'>";
+	for(i=1;i<=row;i++){
+		string=string+"<tr>";
+		for(j=1;j<=col;j++){
+			string=string+"<td>&nbsp;</td>";
+		}
+		string=string+"</tr>";
+	}
+	string=string+"</table>";
+	returnHtml(string);
+}
+</script>

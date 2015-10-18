@@ -1,0 +1,156 @@
+<HTML>
+<HEAD>
+<TITLE>replace</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<Link rel="stylesheet" type="text/css" href="pop.css">
+
+<script language="JavaScript">
+// 初始选定对象
+var oRange;
+oRange=dialogArguments;
+
+// 返回匹配条件
+function searchtype()
+{
+	var retval = 0;
+	var matchcase = 0;
+	var matchword = 0;
+	if (blnMatchCase.checked) matchcase = 4;
+	if (blnMatchWord.checked) matchword = 2;
+	retval = matchcase + matchword;
+	return(retval);
+}
+
+// 检测输入
+function checkInput()
+{
+	if (strSearch.value.length < 1) {
+		alert("请输入查找内容");
+		return false;
+	} else {
+		return true;
+	}
+}
+
+// 查找
+function findtext(onlyfind)
+{
+	try {
+		if (checkInput()) {
+			var searchval = strSearch.value;
+			if (onlyfind) {
+				oRange.collapse(false);
+        	}
+			if (oRange.findText(searchval, 1000000000, searchtype())) {
+				oRange.select();
+			} else {
+				oRange.expand("textedit");
+				oRange.collapse();				               		
+				if (!oRange.findText(searchval, 1000000000, searchtype())) {
+					alert("要查找的内容没有找到！");
+				} else {
+					var startfromtop = confirm("搜索完成，是否要从顶部开始重新搜索？");
+					if (startfromtop) {
+						oRange.select();
+						findtext(onlyfind);
+					}
+				}
+			}
+		}
+	} catch(e) {
+		throw e;
+	}
+}
+
+// 在选中的文本中替换
+function replacetext()
+{
+	try {
+		if (checkInput()) {
+			if (blnMatchCase.checked) {
+				if (oRange.text == strSearch.value) {
+					oRange.text = strReplace.value;
+				}
+			} else {
+				if (oRange.text.toLowerCase() == strSearch.value.toLowerCase()) {
+					oRange.text = strReplace.value;
+				}
+			}
+			findtext(false);
+		}
+	} catch(e) {
+		throw e;
+	}
+}
+
+// 在所有内容中替换
+function replacealltext()
+{
+	try {
+		if (checkInput()) {
+			var searchval = strSearch.value;
+			var wordcount = 0;
+			var msg = "";
+			oRange.expand("textedit");
+			oRange.collapse();
+			oRange.select();
+			while (oRange.findText(searchval, 1000000000, searchtype())){
+				oRange.select();
+				oRange.text = strReplace.value;
+				wordcount++;
+			}
+			if (wordcount == 0) msg = "要查找的内容没有找到！"
+			else msg = wordcount + " 处文本被替换成功";
+			alert(msg);
+		}
+	} catch(e) {
+		throw e;
+	}
+}
+</script>
+
+</HEAD>
+
+<BODY bgcolor="menu" onload="document.all.strSearch.value = oRange.text;">
+
+<table border="0" cellspacing="10" cellpadding="0" align=center style="padding-left:10px" width="346">
+<tr>
+	<td align=center width="316">
+	<font class=title>Replace</font>
+	<hr width=100% >
+	</td>
+</tr>
+<tr>
+	<td width=100%>
+	Find What: &nbsp; &nbsp; &nbsp; <INPUT TYPE=TEXT SIZE=37 NAME=strSearch ID="strSearch">
+	</td>
+</tr>
+<tr>
+	<td width=100%>
+	Replace With: <INPUT TYPE=TEXT SIZE=37 NAME=strReplace ID="strReplace">
+	</td>
+</tr>
+<tr>
+	<td width="316">
+	<INPUT TYPE=checkbox NAME=blnMatchCase ID="blnMatchCase" value="ON">
+	Match Case&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<INPUT TYPE=checkbox NAME=blnMatchWord ID="blnMatchWord" value="ON">
+	Match Whole Word Only</td>
+</tr>
+<tr>
+	<td align=center width="316">
+	<hr width=100% >
+	</td>
+</tr>
+<tr>
+	<td align=center width="316">
+	<BUTTON name="btnFind" onClick="findtext(true);" style="width: 70; height: 22">Find Next</BUTTON>&nbsp; &nbsp;
+	<BUTTON name="btnReplace" onClick="replacetext();" style="width: 70; height: 22">Replace</BUTTON>&nbsp;&nbsp;
+	<BUTTON name="btnReplaceall" onClick="replacealltext();" style="width: 70; height: 22">Replace All</BUTTON>&nbsp;&nbsp;
+    <BUTTON onClick="window.close();" style="width: 70; height: 22">Cancel</BUTTON>
+	</td>
+</tr>
+</table>
+
+</BODY>   
+</HTML>

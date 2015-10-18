@@ -1,0 +1,33 @@
+A:link { color: blue;text-decoration: underline; }
+A:active { color: Red;text-decoration: no; }
+A:visited { color: blue;text-decoration: underline; }
+body
+{
+	FONT-FAMILY: Courier,System;
+	FONT-SIZE: 14px;
+	margin-left:40px;
+	margin-right:40px;
+	
+}
+P
+{
+	FONT-FAMILY: Courier,System
+	FONT-SIZE: 14px
+}
+H4
+{
+	Page-Break-Before:always
+}
+
+TABLE
+{
+	FONT-FAMILY: Courier, System
+	CellSpacing=0;
+	CellPadding=0
+}
+
+TD
+{
+	FONT-FAMILY: Courier,System;
+	FONT-SIZE: 14px;
+}

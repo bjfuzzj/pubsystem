@@ -1,0 +1,1841 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>SINA发布系统可视化编辑器（HTMLEditor）使用说明</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 6.00.2900.2523" name=GENERATOR>
+<META content="Microsoft Word 10" name=Originator><LINK 
+href="htmleditor.files/filelist.xml" rel=File-List><LINK 
+href="htmleditor.files/editdata.mso" rel=Edit-Time-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>dongjt</o:Author>
+  <o:LastAuthor>dongjt</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>806</o:TotalTime>
+  <o:Created>2004-11-26T06:38:00Z</o:Created>
+  <o:LastSaved>2004-11-26T06:38:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>610</o:Words>
+  <o:Characters>3479</o:Characters>
+  <o:Company>sina</o:Company>
+  <o:Lines>28</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4081</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: 宋体;
+}
+@font-face {
+	font-family: 黑体;
+}
+@font-face {
+	font-family: @宋体;
+}
+@font-face {
+	font-family: @黑体;
+}
+@page  {mso-page-border-surround-header: no; mso-page-border-surround-footer: no; }
+@page Section1 {size: 595.3pt 841.9pt; margin: 72.0pt 90.0pt 72.0pt 90.0pt; mso-header-margin: 42.55pt; mso-footer-margin: 49.6pt; mso-paper-source: 0; layout-grid: 15.6pt; }
+P.MsoNormal {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-style-parent: ""; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+LI.MsoNormal {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-style-parent: ""; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+DIV.MsoNormal {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-style-parent: ""; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+H1 {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 22pt; MARGIN: 17pt 0cm 16.5pt; LINE-HEIGHT: 240%; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: lines-together; mso-font-kerning: 22.0pt; mso-style-next: 正文; mso-outline-level: 1
+}
+H3 {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 16pt; MARGIN: 13pt 0cm; LINE-HEIGHT: 173%; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: lines-together; mso-font-kerning: 1.0pt; mso-style-next: 正文; mso-outline-level: 3
+}
+P.MsoNormalIndent {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+LI.MsoNormalIndent {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+DIV.MsoNormalIndent {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 21pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+P.MsoBodyText {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 9pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+LI.MsoBodyText {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 9pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+DIV.MsoBodyText {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 9pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt
+}
+P.MsoDocumentMap {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-style-noshow: yes
+}
+LI.MsoDocumentMap {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-style-noshow: yes
+}
+DIV.MsoDocumentMap {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-style-noshow: yes
+}
+SPAN.SpellE {
+	mso-style-name: ""; mso-spl-e: yes
+}
+SPAN.GramE {
+	mso-style-name: ""; mso-gram-e: yes
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--></HEAD>
+<BODY lang=ZH-CN style="TEXT-JUSTIFY-TRIM: punctuation; tab-interval: 21.0pt">
+<DIV class=Section1 style="LAYOUT-GRID:  15.6pt none">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 23.4pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.5gd" 
+align=center><FONT face=方正姚体 size=5><SPAN lang=EN-US 
+style="mso-bidi-font-weight: normal">SINA</SPAN></FONT><SPAN 
+style="FONT-FAMILY: 方正姚体; mso-bidi-font-weight: normal; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT 
+size=5>发布系统可视化编辑器（</FONT></SPAN><FONT face=方正姚体 size=5><SPAN class=SpellE><SPAN 
+lang=EN-US 
+style="mso-bidi-font-weight: normal">HTMLEditor</SPAN></SPAN></FONT><SPAN 
+style="FONT-FAMILY: 方正姚体; mso-bidi-font-weight: normal; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT 
+size=5>）使用说明</FONT></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 23.4pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.5gd" 
+align=center>　</P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 12pt; MARGIN-BOTTOM: 12pt; TEXT-ALIGN: left; mso-para-margin-bottom: 1.5gd" 
+align=center><FONT face=宋体 size=2><A href="htmleditor.htm#1">1 
+基本功能</A><BR><A href="htmleditor.htm#2">2 类型说明</A><BR><A 
+href="htmleditor.htm#3">3 图示</A><BR><A 
+href="htmleditor.htm#4">4 基本用法</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.1">4.1 段落格式</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.2">4.2 字体颜色</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.3">4.3 字体背景颜色</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.4">4.4 字体</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.5">4.5 字号</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.6">4.6 符号</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.7">4.7 替换</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.8">4.8 清理代码</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.9">4.9 上传文件</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.10">4.10 帮助</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.11">4.11 全选</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.12">4.12 剪切</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.13">4.13 复制</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.14">4.14 粘贴</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.15">4.15 撤销</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.16">4.16 恢复</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.17">4.17 插入表格</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.18">4.18 插入行</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.19">4.19 删除行</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.20">4.20 插入列</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.21">4.21 删除列</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.22">4.22 插入超链接</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.23">4.23 去掉超链接</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.24">4.24 插入图片</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.25">4.25 插入水平线</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.26">4.26 插入Flash</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.27">4.27 插入Windows Media</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.28">4.28 插入Real Media</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.29">4.29 加粗</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.30">4.30 斜体</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.31">4.31 下划线</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.32">4.32 上标</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.33">4.33 下标</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.34">4.34 删除线</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.35">4.35 取消格式</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.36">4.36 左对齐</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.37">4.37 居中</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.38">4.38 右对齐</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.39">4.39 编号</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.40">4.40 项目符号</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.41">4.41 减少缩进量</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.42">4.42 增加缩进量</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.43">4.43 插入引用</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.44">4.44 插入代码</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.45">4.45 插入广告</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.46">4.46 插入分页</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.47">4.47 HTML源代码</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.48">4.48 可视化设计</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.49">4.49 预览</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.50">4.50 减小编辑区域</A><BR>&nbsp; <A 
+href="htmleditor.htm#4.51">4.51 增大编辑区域</A><BR><A 
+href="htmleditor.htm#5">5 算法</A><BR>&nbsp; <A 
+href="htmleditor.htm#5.1">5.1 算法模型</A><BR>&nbsp; <A 
+href="htmleditor.htm#5.2">5.2 算法说明</A><BR>&nbsp; <A 
+href="htmleditor.htm#5.3">5.3 算法示例</A></FONT></P>
+<H3 style="MARGIN: 12pt 0cm 6pt; LINE-HEIGHT: 172%"><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><A 
+name=1></A>1&nbsp; 基本功能</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%"><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+提供了基于文档表单可视化数据录入及编辑功能。</SPAN><SPAN lang=EN-US><o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 6pt; LINE-HEIGHT: 172%"><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><A 
+name=2></A>2&nbsp; 类型说明</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%"><o:p></o:p></SPAN></H3>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 7.8pt; mso-para-margin-bottom: .5gd"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN class=SpellE><SPAN lang=EN-US>Form::htmleditoror</SPAN></SPAN></P>
+<P class=MsoBodyText style="LAYOUT-GRID-MODE: char"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">1)</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt">&nbsp;<SPAN 
+class=GramE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> </SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">该类模板域必须入库。</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN-BOTTOM: 7.8pt; LAYOUT-GRID-MODE: char; mso-para-margin-bottom: .5gd"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">该类型默认数据库入库类型为</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">mediumtext</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">，用户可以更改。</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText style="LAYOUT-GRID-MODE: char"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">2)</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt">&nbsp;<SPAN 
+class=GramE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> </SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">为</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">TextArea</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">提供可视化的编辑功能。</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN-BOTTOM: 7.8pt; LAYOUT-GRID-MODE: char; mso-para-margin-bottom: .5gd"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">由于是可视化的编辑文本框，调用的是</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt">IE</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的格式化功能，所以可能有信息失真，如格式化标签的调整等，对关键的数据，建议使用</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt">Form::TextArea</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">类型的模板域。</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText style="LAYOUT-GRID-MODE: char"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt">3)&nbsp;<SPAN 
+class=GramE>&nbsp;&nbsp;&nbsp;</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">同一模板内可以存在多个此类型模板域。</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt"><o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 6pt; LINE-HEIGHT: 172%"><FONT size=3><SPAN 
+style="FONT-FAMILY: 宋体"><A name=3></A>3&nbsp; </SPAN></FONT><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图示</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%"><o:p></o:p></SPAN></H3>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN 
+lang=EN-US><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shapetype id=_x0000_t75 coordsize = "21600,21600" 
+o:preferrelative = "t" o:spt = "75" filled = "f" stroked = "f" path = 
+" m@4@5 l@4@11@9@11@9@5 xe"><v:stroke joinstyle = 
+"miter"></v:stroke><v:formulas><v:f eqn = 
+"if lineDrawn pixelLineWidth 0 "></v:f><v:f eqn = "sum @0 1 0 "></v:f><v:f eqn = 
+"sum 0 0 @1 "></v:f><v:f eqn = "prod @2 1 2 "></v:f><v:f eqn = 
+"prod @3 21600 pixelWidth "></v:f><v:f eqn = 
+"prod @3 21600 pixelHeight "></v:f><v:f eqn = "sum @0 0 1 "></v:f><v:f eqn = 
+"prod @6 1 2 "></v:f><v:f eqn = "prod @7 21600 pixelWidth "></v:f><v:f eqn = 
+"sum @8 21600 0 "></v:f><v:f eqn = "prod @7 21600 pixelHeight "></v:f><v:f eqn = 
+"sum @10 21600 0 "></v:f></v:formulas><v:path o:extrusionok = "f" 
+gradientshapeok = "t" o:connecttype = "rect"></v:path><o:lock aspectratio="t" 
+v:ext="edit"></o:lock></v:shapetype><v:shape id=_x0000_s1025 
+style="WIDTH: 413.25pt; HEIGHT: 250.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="htmleditoror" src = 
+"htmleditor.files/image001.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=551 height=334
+src="htmleditor.files/image002.jpg" v:shapes="_x0000_s1025"><![endif]><o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 6pt; LINE-HEIGHT: 172%"><FONT size=3><SPAN 
+style="FONT-FAMILY: 宋体"><A name=4></A>4&nbsp; </SPAN></FONT><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">基本用法</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%"><o:p></o:p></SPAN></H3>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 7.8pt; mso-para-margin-bottom: .5gd"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">上面有三排按钮</SPAN><SPAN 
+lang=EN-US>/</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">选择框，中间为编辑区，底部还有一排按钮，依次说明：</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><A 
+name=4.1></A>&nbsp;&nbsp;&nbsp; 4.1</SPAN></B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp; 
+</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">段落格式</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1041 
+style="WIDTH: 60pt; HEIGHT: 15pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image003.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=80 height=20
+src="htmleditor.files/image004.jpg" v:shapes="_x0000_s1041"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+通过下拉框选择设置段落格式（</SPAN><SPAN 
+lang=EN-US>&lt;p&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>&lt;h1&gt;…&lt;h7&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>&lt; pre&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>&lt; address&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'"><A 
+name=4.2></A>&nbsp;&nbsp;&nbsp; </SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">4</SPAN><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">.</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">2</SPAN><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">字体颜色</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1042 
+style="WIDTH: 15pt; HEIGHT: 15pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image005.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=20 height=20
+src="htmleditor.files/image006.jpg" v:shapes="_x0000_s1042"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+弹出对话框设置字体颜色。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'"><A 
+name=4.3></A>&nbsp;&nbsp;&nbsp; 4.</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">3</SPAN><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">字体背景颜色</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1043 
+style="WIDTH: 16.5pt; HEIGHT: 16.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image007.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=22 height=22
+src="htmleditor.files/image008.jpg" v:shapes="_x0000_s1043"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+弹出对话框设置字体背景颜色。</SPAN><SPAN lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.4></A>&nbsp;&nbsp;&nbsp; 4.4&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">字体</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1044 
+style="WIDTH: 99.75pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image009.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=133 height=19
+src="htmleditor.files/image010.jpg" v:shapes="_x0000_s1044"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+通过下拉框选择设置字体。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.5></A>&nbsp;&nbsp;&nbsp; 4.5&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">字号</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1045 
+style="WIDTH: 39pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image011.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=52 height=19
+src="htmleditor.files/image012.jpg" v:shapes="_x0000_s1045"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+通过下拉框选择设置字号。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.6></A>&nbsp;&nbsp;&nbsp; 4.6&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">符号</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1046 
+style="WIDTH: 38.25pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image013.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=51 height=19
+src="htmleditor.files/image014.jpg" v:shapes="_x0000_s1046"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+通过下拉框选择插入特殊符号。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.7></A>&nbsp;&nbsp;&nbsp; 4.7&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">替换</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1047 
+style="WIDTH: 15.75pt; HEIGHT: 15pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image015.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=21 height=20
+src="htmleditor.files/image016.jpg" v:shapes="_x0000_s1047"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+弹出对话框对编辑框中的文字进行查找</SPAN><SPAN lang=EN-US>/</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">替换。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN style="mso-list: Ignore"><SPAN 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'"><A 
+name=4.8></A>&nbsp;&nbsp;&nbsp; 4.</SPAN><SPAN lang=EN-US 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'">8</SPAN><SPAN 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B style="mso-bidi-font-weight: normal"><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理代码</SPAN><SPAN 
+lang=EN-US style="COLOR: blue"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1048 
+style="WIDTH: 15.75pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image017.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=21 height=19
+src="htmleditor.files/image018.jpg" v:shapes="_x0000_s1048"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0cm 0cm 7.8pt 17.85pt; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+弹出清理代码对话框，可以选择“彻底清理”或“选择清理”：</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0cm 0cm 7.8pt 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt" 
+align=center><SPAN lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1049 
+style="WIDTH: 270pt; HEIGHT: 309.75pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image019.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=360 height=413
+src="htmleditor.files/image020.jpg" v:shapes="_x0000_s1049"><![endif]></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0cm 0cm 7.8pt 17.85pt; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+示例：</SPAN></P>
+<P class=MsoBodyText 
+style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><!--[if gte vml 1]><v:shape 
+id=_x0000_s1050 style="WIDTH: 415.5pt; HEIGHT: 294.75pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image021.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=554 height=393
+src="htmleditor.files/image022.jpg" v:shapes="_x0000_s1050"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（清理之前的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">状态）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><!--[if gte vml 1]><v:shape 
+id=_x0000_s1051 style="WIDTH: 414.75pt; HEIGHT: 196.5pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image023.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=262
+src="htmleditor.files/image024.jpg" v:shapes="_x0000_s1051"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（清理之前的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">代码）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-FAMILY: Wingdings">n</SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: Wingdings"> </SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体">彻底清理</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></B></P>
+<P class=MsoBodyText 
+style="MARGIN: 8pt 0cm 12pt 18pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -0.15pt; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd"><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+将清理</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">HTML</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">代码中的大部分标记，保留文字、</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">&lt;P&gt;</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">和</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">&lt;BR&gt;</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">标记、较大的图片和</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">sina</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">超链接，其余的</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">HTML</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">标记和</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt">script</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">脚本代码等都被清除。</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 0cm 0cm 7.8pt 18pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -0.15pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><!--[if gte vml 1]><v:shape 
+id=_x0000_s1052 style="WIDTH: 415.5pt; HEIGHT: 299.25pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image025.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=554 height=399
+src="htmleditor.files/image026.jpg" v:shapes="_x0000_s1052"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（彻底清理之后的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">状态）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 0cm 0cm 7.8pt 18pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: -0.15pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt"><!--[if gte vml 1]><v:shape 
+id=_x0000_s1053 style="WIDTH: 414.75pt; HEIGHT: 177pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image027.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=236
+src="htmleditor.files/image028.jpg" v:shapes="_x0000_s1053"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（彻底清理之后的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">代码）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoBodyText style="LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+</SPAN><A name=_Toc77050978><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-FAMILY: Wingdings">n</SPAN></A><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: Wingdings"> </SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体">选择清理</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 黑体; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 8pt; MARGIN-BOTTOM: 8pt; MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+可以选择：</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 5px; MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>a) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理脚本代码</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+清理所有的</SPAN><SPAN lang=EN-US>Script</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">脚本代码块（</SPAN><SPAN 
+lang=EN-US>&lt;script&gt;…&lt;/script&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 5px 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>b) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US>IFrame</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+清理所有的</SPAN><SPAN class=SpellE><SPAN lang=EN-US>IFrame</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">代码块（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>iframe</SPAN>&gt;…&lt;/ <SPAN 
+class=SpellE>iframe</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 5px 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>c) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理</SPAN><SPAN 
+lang=EN-US>Flash</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+清理所有的</SPAN><SPAN lang=EN-US>Flash</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对象</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 7px; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>d) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理</SPAN><SPAN 
+lang=EN-US>GIF</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">广告图片</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+通过设置图片的宽和（或）高来判断是否需要清理，认为较小的</SPAN><SPAN lang=EN-US>GIF</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">图片（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>img</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">标记中的或其它标记的</SPAN><SPAN 
+lang=EN-US>Background</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">属性中的）是广告图片。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 5px 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>e) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理非</SPAN><SPAN 
+lang=EN-US>sina</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的超链接</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+如果</SPAN><SPAN lang=EN-US>HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">标记</SPAN><SPAN 
+lang=EN-US>&lt;a&gt;…&lt;/a&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中的链接地址不是</SPAN><SPAN 
+lang=EN-US>sina</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的，将被取消链接。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 5px 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58">&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>f) </SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">清理非</SPAN><SPAN 
+lang=EN-US>sina</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的图片</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: 27.1pt; mso-para-margin-left: 1.7gd; mso-char-indent-count: 2.58"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+如果</SPAN><SPAN lang=EN-US>HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">标记</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>img</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">或其它标记的</SPAN><SPAN 
+lang=EN-US>Background</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">属性中的图片地址不是</SPAN><SPAN 
+lang=EN-US>sina</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的，将被清理。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 15.6pt 0cm 7.8pt 17.95pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 1.0gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1026 
+style="WIDTH: 414.75pt; HEIGHT: 295.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image029.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=394
+src="htmleditor.files/image030.jpg" v:shapes="_x0000_s1026"><![endif]></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（清理之前的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">状态）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 7.8pt 17.95pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1054 
+style="WIDTH: 414.75pt; HEIGHT: 175.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image031.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=234
+src="htmleditor.files/image032.jpg" v:shapes="_x0000_s1054"><![endif]></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN-BOTTOM: 7.8pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（清理之前的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">代码）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 15.6pt 0cm 7.8pt 17.95pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 1.0gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1055 
+style="WIDTH: 414.75pt; HEIGHT: 297.75pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image033.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=397
+src="htmleditor.files/image034.jpg" v:shapes="_x0000_s1055"><![endif]></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">（选择清理</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">a</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">、</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">b</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">、</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">c</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">、</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">d</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">、</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">e</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">项后的</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt">Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 9.0pt">状态）</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-size: 9.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 15.6pt 0cm 7.8pt 17.95pt; TEXT-ALIGN: center; mso-para-margin-bottom: .5gd; mso-para-margin-top: 1.0gd; mso-para-margin-right: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1056 
+style="WIDTH: 414.75pt; HEIGHT: 295.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image035.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=553 height=394
+src="htmleditor.files/image036.jpg" v:shapes="_x0000_s1056"><![endif]></SPAN></P>
+<P class=MsoBodyText 
+style="MARGIN: 7.8pt 0cm 15.6pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 17.85pt; TEXT-ALIGN: center; mso-para-margin-bottom: 1.0gd; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 0cm" 
+align=center><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（选择清理</SPAN><SPAN 
+lang=EN-US>a</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>b</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>c</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>d</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>f</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">项后的</SPAN><SPAN 
+lang=EN-US>Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">状态）</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.9></A>&nbsp;&nbsp;&nbsp; 4.9&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">上<SPAN 
+class=GramE>传文件</SPAN></SPAN><SPAN lang=EN-US><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape 
+id=_x0000_s1027 style="WIDTH: 15.75pt; HEIGHT: 15pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image037.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=21 height=20
+src="htmleditor.files/image038.jpg" v:shapes="_x0000_s1027"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">弹出对话框，选择文件进行上传，文件类型只能为</SPAN><SPAN 
+lang=EN-US>jpg</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>gif</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.10></A>&nbsp;&nbsp;&nbsp; 4.10&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">帮助</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1028 
+style="WIDTH: 14.25pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image039.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=19 height=19
+src="htmleditor.files/image040.jpg" v:shapes="_x0000_s1028"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在新的浏览器窗口中显示htmleditor文档。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.11></A>&nbsp;&nbsp;&nbsp; 4.11&nbsp;&nbsp; </SPAN></B><![endif]><SPAN 
+class=GramE><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">全选</SPAN></B></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape 
+id=_x0000_s1029 style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" 
+coordsize = "21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image041.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image042.jpg" v:shapes="_x0000_s1029"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">编辑框中内容被全部选中。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.12></A>&nbsp;&nbsp;&nbsp; 4.12&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">剪切</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1030 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image043.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image044.jpg" v:shapes="_x0000_s1030"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">剪切编辑框中选中的内容。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.13></A>&nbsp;&nbsp;&nbsp; 4.13&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">复制</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1031 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image045.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image046.jpg" v:shapes="_x0000_s1031"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">复制编辑框中选中的内容。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.14></A>&nbsp;&nbsp;&nbsp; 4.14&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">粘贴</SPAN> 
+<SPAN style="mso-spacerun: yes">&nbsp;</SPAN><SPAN lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1032 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"> <v:imagedata o:title="" src = 
+"htmleditor.files/image047.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image048.jpg" v:shapes="_x0000_s1032"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中当前编辑位置粘贴剪贴板中的内容。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.15></A>&nbsp;&nbsp;&nbsp; 4.15&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">撤销</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1033 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image049.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image050.jpg" v:shapes="_x0000_s1033"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">撤销上一步操作（<SPAN 
+style="COLOR: red">注意：</SPAN>此功能有</SPAN><SPAN lang=EN-US>BUG</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">！撤销的不是编辑框内的操作，而是整个页面的操作。）</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.16></A>&nbsp;&nbsp;&nbsp; 4.16&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">恢复</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1034 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image051.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image052.jpg" v:shapes="_x0000_s1034"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">恢复撤销的操作（<SPAN 
+style="COLOR: red">注意：</SPAN>此功能有</SPAN><SPAN lang=EN-US>BUG</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">！恢复的不是编辑框内的操作，而是整个页面的操作。）</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.17></A>&nbsp;&nbsp;&nbsp; 4.17&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入表格</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1035 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image053.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image054.jpg" v:shapes="_x0000_s1035"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入表格（</SPAN><SPAN 
+lang=EN-US>&lt;table&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），可以在弹出的对话框中设置表格的行数、列数、宽度、边框粗细、单元格边距、边框颜色、背景颜色和对齐方式。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.18></A>&nbsp;&nbsp;&nbsp; 4.18&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入行</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1036 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image055.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image056.jpg" v:shapes="_x0000_s1036"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果当前编辑位置是在表格中，将在此表格中插入一行。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.19></A>&nbsp;&nbsp;&nbsp; 4.19&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">删除行</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1037 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image057.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image058.jpg" v:shapes="_x0000_s1037"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果当前编辑位置是在表格中，将删除此表格中的当前行。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.20></A>&nbsp;&nbsp;&nbsp; 4.20&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入列</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1038 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image059.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image060.jpg" v:shapes="_x0000_s1038"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果当前编辑位置是在表格中，将在此表格中插入一列。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.21></A>&nbsp;&nbsp;&nbsp; 4.21&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">删除列</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1039 
+style="WIDTH: 13.5pt; HEIGHT: 12.75pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image061.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=17
+src="htmleditor.files/image062.jpg" v:shapes="_x0000_s1039"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果当前编辑位置是在表格中，将删除此表格中的当前列。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN style="mso-list: Ignore"><SPAN 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'"><A 
+name=4.22></A>&nbsp;&nbsp;&nbsp; 4.</SPAN><SPAN lang=EN-US 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'">22</SPAN><SPAN 
+style="COLOR: blue; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B style="mso-bidi-font-weight: normal"><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入超链接</SPAN><SPAN 
+lang=EN-US style="COLOR: blue"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1040 
+style="WIDTH: 14.25pt; HEIGHT: 14.25pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image063.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=19 height=19
+src="htmleditor.files/image064.jpg" v:shapes="_x0000_s1040"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0cm 0cm 7.8pt 17.85pt; mso-para-margin-bottom: .5gd; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入超链接（</SPAN><SPAN 
+lang=EN-US>&lt;a&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），可以在弹出的对话框中设置超链接类型、地址（</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US>href</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）、</SPAN><SPAN 
+lang=EN-US>class</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（默认为</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US>akey</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）、目标框架（</SPAN><SPAN 
+lang=EN-US>target</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）和提示（</SPAN><SPAN 
+lang=EN-US>title</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt; TEXT-ALIGN: center"><SPAN 
+lang=EN-US><!--[if gte vml 1]><v:shape id=_x0000_s1057 
+style="WIDTH: 252pt; HEIGHT: 228.75pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image065.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=336 height=305
+src="htmleditor.files/image066.jpg" v:shapes="_x0000_s1057"><![endif]></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.23></A>&nbsp;&nbsp;&nbsp; 4.23&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">去掉超链接</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1058 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image067.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image068.jpg" v:shapes="_x0000_s1058"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果当前编辑位置是某一超链接中，将取消该链接。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.24></A>&nbsp;&nbsp;&nbsp; 4.24&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入图片</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1059 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image069.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image070.jpg" v:shapes="_x0000_s1059"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入图片（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>img</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），可以在弹出的对话框中设置图片来源、替换文字、对齐方式、边框宽度、水平和垂直间隔。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd">
+<font color="#FF0000"><span style="font-family: 宋体">
+注意：此功能并不上传图片，要上传图片，请使用“上传文件”功能。</span></font></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.25></A>&nbsp;&nbsp;&nbsp; 4.25&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入水平线</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1060 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image071.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image072.jpg" v:shapes="_x0000_s1060"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入水平线（</SPAN><SPAN 
+lang=EN-US>&lt;hr&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.26></A>&nbsp;&nbsp;&nbsp; 4.26&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入</SPAN><SPAN 
+lang=EN-US>Flash<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1061 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image073.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image074.jpg" v:shapes="_x0000_s1061"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入</SPAN><SPAN 
+lang=EN-US>flash</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件，可以在弹出的对话框中设置</SPAN><SPAN 
+lang=EN-US>flash</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</SPAN><SPAN 
+lang=EN-US>URL</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、宽度和高度。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.27></A>&nbsp;&nbsp;&nbsp; 4.27&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入</SPAN><SPAN 
+lang=EN-US>Windows Media<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1062 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image075.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image076.jpg" v:shapes="_x0000_s1062"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入</SPAN><SPAN 
+lang=EN-US>Windows Media</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件（</SPAN><SPAN 
+lang=EN-US>.<SPAN class=SpellE>avi</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>.<SPAN class=SpellE>wmv</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US>asf</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+class=SpellE><SPAN lang=EN-US>mov</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），可以在弹出的对话框中设置</SPAN><SPAN 
+lang=EN-US>Windows Media</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件的</SPAN><SPAN 
+lang=EN-US>URL</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、宽度和高度。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.28></A>&nbsp;&nbsp;&nbsp; 4.28&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入</SPAN><SPAN 
+lang=EN-US>Real Media<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1063 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image077.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image078.jpg" v:shapes="_x0000_s1063"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入</SPAN><SPAN 
+lang=EN-US>Real Media</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件（</SPAN><SPAN 
+lang=EN-US>.<SPAN class=SpellE>rm</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>.<SPAN class=SpellE>ra</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>ram</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），可以在弹出的对话框中设置</SPAN><SPAN 
+lang=EN-US>Real Media</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件的</SPAN><SPAN 
+lang=EN-US>URL</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、宽度和高度。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.29></A>&nbsp;&nbsp;&nbsp; 4.29&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">加粗</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1064 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image079.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image080.jpg" v:shapes="_x0000_s1064"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或者当前编辑位置变为粗体格式（</SPAN><SPAN 
+lang=EN-US>&lt;strong&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的粗体格式（如果存在的话）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.30></A>&nbsp;&nbsp;&nbsp; 4.30&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">斜体</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1065 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image081.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image082.jpg" v:shapes="_x0000_s1065"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或当前编辑位置变为斜体格式（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>em</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的斜体格式（如果存在的话）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.31></A>&nbsp;&nbsp;&nbsp; 4.31&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下划线</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1066 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image083.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image084.jpg" v:shapes="_x0000_s1066"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或当前编辑位置变为下划线格式（</SPAN><SPAN 
+lang=EN-US>&lt;u&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的下划线格式（如果存在的话）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.32></A>&nbsp;&nbsp;&nbsp; 4.32&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">上标</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1067 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image085.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image086.jpg" v:shapes="_x0000_s1067"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或当前编辑位置变为上标格式（</SPAN><SPAN 
+lang=EN-US>&lt;sup&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的上标格式（如果存在的话）。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.33></A>&nbsp;&nbsp;&nbsp; 4.33&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">下标</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1068 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image087.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image088.jpg" v:shapes="_x0000_s1068"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或当前编辑位置变为下标格式（</SPAN><SPAN 
+lang=EN-US>&lt;sub&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的下标格式（如果存在的话）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.34></A>&nbsp;&nbsp;&nbsp; 4.34&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">删除线</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1069 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image089.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image090.jpg" v:shapes="_x0000_s1069"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">使编辑框中选中的内容或当前编辑位置变为删除线格式（</SPAN><SPAN 
+lang=EN-US>&lt; strike &gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），或者取消该处的删除线格式（如果存在的话）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.35></A>&nbsp;&nbsp;&nbsp; 4.35&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">取消格式</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1070 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image091.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image092.jpg" v:shapes="_x0000_s1070"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">取消编辑框中选中的内容或当前编辑位置处所存在的所有格式。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.36></A>&nbsp;&nbsp;&nbsp; 4.36&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">左对齐</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1071 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image093.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image094.jpg" v:shapes="_x0000_s1071"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">设置编辑框中选中的内容或当前行的对齐方式为左对齐（</SPAN><SPAN 
+lang=EN-US>align=left</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.37></A>&nbsp;&nbsp;&nbsp; 4.37&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">居中</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1072 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image095.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image096.jpg" v:shapes="_x0000_s1072"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">设置编辑框中选中的内容或当前行的对齐方式为居中（</SPAN><SPAN 
+lang=EN-US>align=center</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.38></A>&nbsp;&nbsp;&nbsp; 4.38&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">右对齐</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1073 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image097.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image098.jpg" v:shapes="_x0000_s1073"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">设置编辑框中选中的内容或当前行的对齐方式为右对齐（</SPAN><SPAN 
+lang=EN-US>align=right</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.39></A>&nbsp;&nbsp;&nbsp; 4.39&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">编号</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1074 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image099.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image100.jpg" v:shapes="_x0000_s1074"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">给编辑框中选中的内容或当前行加上或者取消（如果存在的话）编号（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>ol</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>li</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.40></A>&nbsp;&nbsp;&nbsp; 4.40&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">项目符号</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1075 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image101.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image102.jpg" v:shapes="_x0000_s1075"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">给编辑框中选中的内容或当前行加上或者取消（如果存在的话）项目符号（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>ul</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">、</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>li</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.41></A>&nbsp;&nbsp;&nbsp; 4.41&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">减少缩进量</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1076 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image103.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image104.jpg" v:shapes="_x0000_s1076"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">减小编辑框中选中的内容或当前行的缩进量（</SPAN><SPAN 
+lang=EN-US>&lt;<SPAN class=SpellE>blockquote</SPAN>&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.42></A>&nbsp;&nbsp;&nbsp; 4.42&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增加缩进量</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1077 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image105.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image106.jpg" v:shapes="_x0000_s1077"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增加编辑框中选中的内容或当前行的缩进量。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.43></A>&nbsp;&nbsp;&nbsp; 4.43&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入引用</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1078 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image107.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image108.jpg" v:shapes="_x0000_s1078"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">将编辑框中选中的内容变为引用（</SPAN><SPAN 
+lang=EN-US>&lt;div class=quote&gt;</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.44></A>&nbsp;&nbsp;&nbsp; 4.44&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入代码</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1079 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image109.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image110.jpg" v:shapes="_x0000_s1079"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">将编辑框中选中的内容变为可呈现的页面代码。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.45></A>&nbsp;&nbsp;&nbsp; 4.45&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入广告</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1080 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image111.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image112.jpg" v:shapes="_x0000_s1080"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">未实现。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><A 
+name=4.46></A><![endif]><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore">&nbsp;&nbsp;&nbsp; 
+4.46&nbsp;&nbsp; </SPAN></B><![endif]><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; FONT-STYLE: normal; FONT-FAMILY: Times New Roman; FONT-VARIANT: normal; mso-fareast-font-family: Times New Roman; mso-list: Ignore">&nbsp;</SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">插入分页</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1081 
+style="WIDTH: 13.5pt; HEIGHT: 13.5pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image113.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=18 height=18
+src="htmleditor.files/image114.jpg" v:shapes="_x0000_s1081"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在编辑框中的当前编辑位置插入分页标记（</SPAN><SPAN 
+lang=EN-US>[page title=]</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。<SPAN 
+style="COLOR: blue">如果要在分页（第</SPAN></SPAN><SPAN lang=EN-US 
+style="COLOR: blue">2</SPAN><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">—</SPAN><SPAN 
+lang=EN-US style="COLOR: blue">n</SPAN><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">页）中使用新的标题，可以在“</SPAN><SPAN 
+lang=EN-US style="COLOR: blue">title=</SPAN><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”后设置，如：</SPAN><SPAN 
+lang=EN-US style="COLOR: blue">[page title=</SPAN><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">新标题</SPAN><SPAN 
+lang=EN-US style="COLOR: blue">]</SPAN><SPAN 
+style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt">
+<SPAN 
+style="COLOR: red; font-family:宋体; mso-ascii-font-family:Times New Roman; mso-hansi-font-family:Times New Roman">注意：
+只有该HTMLEditor模板域是“文章正文”属性时才具有分页功能！</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.47></A>&nbsp;&nbsp;&nbsp; 4.47&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US>HTML</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">源代码</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1082 
+style="WIDTH: 50.25pt; HEIGHT: 18pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image115.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=67 height=24
+src="htmleditor.files/image116.jpg" v:shapes="_x0000_s1082"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">切换到</SPAN><SPAN 
+lang=EN-US>HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">代码编辑模式，所有</SPAN><SPAN 
+lang=EN-US>HTML</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">标记元素将变为小写（不包括其</SPAN><SPAN 
+lang=EN-US 
+style="mso-bidi-font-weight: bold; mso-bidi-font-size: 10.5pt">Attribute 
+/Property</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">），并且对代码还有其它一些特殊处理。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.48></A>&nbsp;&nbsp;&nbsp; 4.48&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">可视化设计</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1083 
+style="WIDTH: 51.75pt; HEIGHT: 18pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image117.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=69 height=24
+src="htmleditor.files/image118.jpg" v:shapes="_x0000_s1083"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">切换到可视化编辑设计模式。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.49></A>&nbsp;&nbsp;&nbsp; 4.49&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">预览</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1084 
+style="WIDTH: 47.25pt; HEIGHT: 18pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image119.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=63 height=24
+src="htmleditor.files/image120.jpg" v:shapes="_x0000_s1084"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对编辑框中当前内容进行预览，并且自动切换到</SPAN><SPAN 
+lang=EN-US>Design</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">模式。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.85pt; TEXT-INDENT: -17.85pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.50></A>&nbsp;&nbsp;&nbsp; 4.50&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">减小编辑区域</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1085 
+style="WIDTH: 15pt; HEIGHT: 15pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image121.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=20 height=20
+src="htmleditor.files/image122.jpg" v:shapes="_x0000_s1085"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; mso-para-margin-bottom: .0001pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">减小编辑框的大小。</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l0 level1 lfo5; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'; mso-list: Ignore"><A 
+name=4.51></A>&nbsp;&nbsp;&nbsp; 4.51&nbsp;&nbsp; </SPAN></B><![endif]><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增大编辑区域</SPAN><SPAN 
+lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><!--[if gte vml 1]><v:shape id=_x0000_s1086 
+style="WIDTH: 15pt; HEIGHT: 15pt" type = "#_x0000_t75" coordsize = 
+"21600,21600"><v:imagedata o:title="" src = 
+"htmleditor.files/image123.png"></v:imagedata></v:shape><![endif]--><![if !vml]><img border=0 width=20 height=20
+src="htmleditor.files/image124.jpg" v:shapes="_x0000_s1086"><![endif]><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">增大编辑框的大小。</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 6pt; LINE-HEIGHT: 172%"><FONT size=3><SPAN 
+style="FONT-FAMILY: 宋体"><A name=5></A>5&nbsp; </SPAN></FONT><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">算法</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 12pt; LINE-HEIGHT: 172%"><o:p></o:p></SPAN></H3>
+<P class=MsoNormal 
+style="MARGIN: 0cm 0cm 7.8pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .5gd; mso-list: l3 level1 lfo6; tab-stops: list 18.0pt; mso-para-margin-top: 0cm; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><![if !supportLists]><A 
+name=5.1></A><![endif]><B style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+5.1</SPAN></B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp; 
+</SPAN><![if !supportLists]><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; FONT-STYLE: normal; FONT-FAMILY: Times New Roman; FONT-VARIANT: normal; mso-bidi-font-weight: bold; mso-fareast-font-family: Times New Roman; mso-list: Ignore">&nbsp;</SPAN><![endif]><B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">算法模型</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>[Typeset]</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>Enabled=true/false</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>[Search]</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>Enabled=true/false</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>CGI=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『相关搜索接口</SPAN><SPAN 
+lang=EN-US>CGI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">』</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN class=SpellE><SPAN lang=EN-US>AddToList</SPAN></SPAN><SPAN 
+lang=EN-US>=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『</SPAN><SPAN 
+lang=EN-US>Form</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">类型模板域名称』</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN class=SpellE><SPAN lang=EN-US>Param</SPAN></SPAN><SPAN 
+lang=EN-US>=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『</SPAN><SPAN 
+lang=EN-US>CGI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">搜索传送的参数』</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>[Keyword]</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>Enabled=true/false</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>CGI=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『关键字链接处理接口</SPAN><SPAN 
+lang=EN-US>CGI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">』</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd"><B><SPAN 
+lang=EN-US><o:p>&nbsp;</o:p></SPAN></B></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>[<SPAN class=SpellE>SpecialKeyword</SPAN>]</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>Enabled=true/false</SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN class=SpellE><SPAN lang=EN-US>ButtonName</SPAN></SPAN><SPAN 
+lang=EN-US>=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『按钮文字』</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US>CGI=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『特殊关键字链接处理接口</SPAN><SPAN 
+lang=EN-US>CGI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">』</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd"><B><SPAN 
+lang=EN-US><o:p>&nbsp;</o:p></SPAN></B></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US style="COLOR: #999999">[<SPAN 
+class=SpellE>SameResult</SPAN>]<o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent 
+style="MARGIN-LEFT: 17.95pt; TEXT-INDENT: 0cm; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US style="COLOR: #999999">Enabled=true/false<o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US style="COLOR: #999999">TmplField1=</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『模板域名</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">1</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">』</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN lang=EN-US style="COLOR: #999999">TmplField2=</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">『模板域名</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">2</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">』</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 17.95pt; mso-para-margin-left: 1.71gd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">……</SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 8pt 0cm 7.8pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level1 lfo6; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><A 
+name=5.2></A>&nbsp;&nbsp;&nbsp; 5.2</SPAN></B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp; 
+</SPAN><![if !supportLists]><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 7pt; FONT-STYLE: normal; FONT-FAMILY: Times New Roman; FONT-VARIANT: normal; mso-bidi-font-weight: bold; mso-fareast-font-family: Times New Roman; mso-list: Ignore">&nbsp;</SPAN><![endif]><B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">算法说明</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 39pt; TEXT-INDENT: -18pt; mso-list: l3 level2 lfo6; tab-stops: list 39.0pt"><![if !supportLists]><B><SPAN 
+style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;a)<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN></B><![endif]><B><SPAN 
+lang=EN-US>Typeset<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 39pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+同</SPAN><SPAN class=SpellE><SPAN lang=EN-US>TextArea</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 38.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level2 lfo6; tab-stops: list 39.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 38.85pt"><![if !supportLists]><![endif]><![if !supportLists]><B><SPAN 
+style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;</SPAN></SPAN></B><![endif]><![if !supportLists]><B><SPAN 
+lang=EN-US 
+style="mso-fareast-font-family: Times New Roman; mso-list: Ignore">b)<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B><SPAN lang=EN-US>Search<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 39pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+同</SPAN><SPAN class=SpellE><SPAN lang=EN-US>TextArea</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 38.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level2 lfo6; tab-stops: list 39.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 38.85pt"><![if !supportLists]><![endif]><![if !supportLists]><B><SPAN 
+style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;</SPAN></SPAN></B><![endif]><![if !supportLists]><B><SPAN 
+lang=EN-US 
+style="mso-fareast-font-family: Times New Roman; mso-list: Ignore">c)<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><B><SPAN 
+lang=EN-US>Keyword<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 38.85pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+同</SPAN><SPAN class=SpellE><SPAN lang=EN-US>TextArea</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 38.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level2 lfo6; tab-stops: list 39.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 38.85pt"><![if !supportLists]><![endif]><![if !supportLists]><B><SPAN 
+style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;</SPAN></SPAN></B><![endif]><![if !supportLists]><B><SPAN 
+lang=EN-US 
+style="mso-fareast-font-family: Times New Roman; mso-list: Ignore">d)<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><SPAN class=SpellE><B><SPAN 
+lang=EN-US>SpecialKeyword</SPAN></B></SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 39pt"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+同</SPAN><SPAN class=SpellE><SPAN lang=EN-US>TextArea</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><B><SPAN 
+lang=EN-US><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 7.8pt 0cm 0pt 38.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level2 lfo6; tab-stops: list 39.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 38.85pt"><![if !supportLists]><![endif]><![if !supportLists]><B><SPAN 
+style="mso-list: Ignore"><SPAN 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US 
+style="mso-fareast-font-family: 'Times New Roman'">&nbsp;</SPAN></SPAN></B><![endif]><![if !supportLists]><B><SPAN 
+lang=EN-US 
+style="COLOR: #999999; mso-fareast-font-family: Times New Roman; mso-list: Ignore">e)<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><![endif]><SPAN class=SpellE><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="COLOR: #999999">SameResult</SPAN></B></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US style="COLOR: #999999"> 
+</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（保留功能，以便将来扩展，目前不推广使用）</SPAN><SPAN 
+lang=EN-US 
+style="COLOR: #999999; mso-bidi-font-weight: bold"><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.85pt; TEXT-INDENT: 3pt"><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+可选，是否在分页时对某些模板域使用统一结果，默认</SPAN><SPAN lang=EN-US 
+style="COLOR: #999999">false</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B><SPAN 
+style="COLOR: #999999">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">Enabled</SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B><SPAN lang=EN-US 
+style="COLOR: #999999"><SPAN 
+style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+是否在分页时对某些模板域使用统一结果</SPAN><SPAN lang=EN-US 
+style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="COLOR: #999999">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">TmplField1</SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="COLOR: #999999"><SPAN 
+style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+分页时使用统一结果的模板域名称</SPAN><SPAN lang=EN-US 
+style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; mso-para-margin-left: 3.43gd"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="COLOR: #999999; mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+用模板域名即可，不使用</SPAN><SPAN lang=EN-US style="COLOR: #999999">${</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">模板域名</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">}</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，例如：</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">TmplField1=</SPAN><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">留言链接</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="COLOR: #999999">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+lang=EN-US style="COLOR: #999999">TmplField2 ……</SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：</SPAN><SPAN 
+lang=EN-US style="COLOR: #999999"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="COLOR: #999999"><SPAN 
+style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></B><SPAN 
+style="COLOR: #999999; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp; 
+更多模板域的名称</SPAN><SPAN lang=EN-US 
+style="COLOR: #999999; mso-bidi-font-weight: bold"><o:p></o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 10pt 0cm 7.8pt 17.85pt; TEXT-INDENT: -17.85pt; mso-para-margin-bottom: .0001pt; mso-list: l3 level1 lfo6; tab-stops: list 18.0pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-left: 17.85pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><A 
+name=5.3></A>&nbsp;&nbsp;&nbsp; 5.3</SPAN></B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp; 
+</SPAN><B><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">算法</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">示例</SPAN><SPAN 
+lang=EN-US style="mso-bidi-font-weight: bold"><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>[Typeset]</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>Enabled=true</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>[Search]</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>Enabled=false</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>[Keyword]</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>Enabled=true</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>CGI=http://61.135.153.91:8080/cgi-bin/gsps/keyword/new/search_newkeywords.cgi</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 18pt"><SPAN 
+lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>[<SPAN class=SpellE>SpecialKeyword</SPAN>]</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>Enabled=true</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+class=SpellE><SPAN lang=EN-US>ButtonName</SPAN></SPAN><SPAN 
+lang=EN-US>=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">手机关键词替换</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 18pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+lang=EN-US>CGI=http://91.pub.sina.com.cn:8080/cgi-bin/gsps/keyword/cellphone_keywords.cgi</SPAN></P></DIV></BODY></HTML>

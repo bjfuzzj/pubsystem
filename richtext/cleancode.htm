@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>清理代码</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<Link rel="stylesheet" type="text/css" href="pop.css">
+
+<SCRIPT language="JavaScript">
+// 初始值
+function InitDocument()
+{
+	SelChange(0);
+}
+
+function SelChange(sel)
+{
+	oAllClean.checked = (sel==0);
+	oSelClean.checked = (sel!=0);
+	oCleanScript.disabled = (sel==0);
+	oCleanIFrame.disabled = (sel==0);
+	oCleanFlash.disabled = (sel==0);
+	oCleanGIF.disabled = (sel==0);
+	oCleanLink.disabled = (sel==0);
+	oCleanImg.disabled = (sel==0);
+	
+	if (sel==0) {
+		oWidth.disabled = true;
+		oHeight.disabled = true;
+		oAndOr.disabled = true;
+	} else {
+		GIFChecked();
+	}
+}
+
+function GIFChecked()
+{
+	oWidth.disabled = !oCleanGIF.checked;
+	oHeight.disabled = !oCleanGIF.checked;
+	oAndOr.disabled = !oCleanGIF.checked;
+}
+
+function IsDigit()
+{
+	return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+</SCRIPT>
+
+<SCRIPT event=onclick for=OK language=JavaScript>
+	var a=new Array();
+	if (oAllClean.checked) {
+		a[0]=0;
+	} else {
+		a[0]=1;
+		a[1]=oCleanScript.checked;
+		a[2]=oCleanIFrame.checked;
+		a[3]=oCleanFlash.checked;
+		a[4]=oCleanGIF.checked;
+		a[5]=oWidth.value;
+		a[6]=oAndOr.options[oAndOr.options.selectedIndex].value;
+		a[7]=oHeight.value;
+		a[8]=oCleanLink.checked;
+		a[9]=oCleanImg.checked;
+	}
+	window.returnValue = a;
+	window.close();
+</SCRIPT>
+
+</HEAD>
+
+<BODY bgcolor="menu" onload="InitDocument()">
+
+<table border="0" cellspacing="10" cellpadding="0" align=center style="padding-left:10px" width="339">
+<tr>
+	<td align=center width="309">
+	<font class=title>清理代码</font>
+	<hr width=100%>
+	</td>
+</tr>
+<tr>
+	<td width=309>
+	<input type="radio" name="oAllClean" id="oAllClean" onclick="SelChange(0);" checked>&nbsp; 彻底清理
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (保留文字、<font size="2">&lt;</font>P<font size="2">&gt;</font>和<font size="2">&lt;</font>BR<font size="2">&gt;</font>标记、大图片及sina链接)</td>
+</tr>
+<tr>
+	<td width=309>
+	<input type="radio" name="oSelClean" id="oSelClean" onclick="SelChange(1);">&nbsp; 选择清理:</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanScript" id="oCleanScript" checked value="ON"> 清理脚本代码</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanIFrame" id="oCleanIFrame" checked value="ON"> 清理IFrame</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanFlash" id="oCleanFlash" checked value="ON"> 清理Flash等</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanGIF" id="oCleanGIF" onclick="GIFChecked()" checked value="ON"> 
+    清理GIF广告图片<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( 宽<font size="2">&lt;=</font>
+    <input name="oWidth" id="oWidth" size="5" onkeypress="event.returnValue=IsDigit();" value="100">&nbsp;&nbsp;
+    <select name="oAndOr" id="oAndOr"><option value="And">并且</option><option value="Or">或者</option></select>&nbsp;&nbsp;
+    高<font size="2">&lt;= </font><input name="oHeight" id="oHeight" size="5" onkeypress="event.returnValue=IsDigit();" value="100"> )</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanLink" id="oCleanLink" checked value="ON"> 
+    清理非sina的无用链接</td>
+</tr>
+<tr>
+	<td width="309">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=checkbox name="oCleanImg" id="oCleanImg" value="ON"> 
+    清理非sina的图片</td>
+</tr>
+<tr>
+	<td align=center width="309">
+	<hr width=100% >
+	</td>
+</tr>
+<tr>
+	<td align=center width="309">
+	<BUTTON id=OK type=submit>
+    OK</BUTTON>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <BUTTON onClick="window.close();">Cancel</BUTTON>
+	</td>
+</tr>
+</table>
+</BODY>   
+</HTML>

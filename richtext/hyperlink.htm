@@ -1,0 +1,500 @@
+<HTML><HEAD>
+
+<TITLE>Hyperlink</TITLE>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+
+<Link rel="stylesheet" type="text/css" href="pop.css" />
+
+<script language="javascript" >
+/*
+*--------------- Read.htm -----------------
+* Request[key]
+* 功能:实现ASP的取得URL字符串,Request("AAA")
+* 参数:key,字符串.
+* 实例:alert(Request["AAA"])
+*--------------- Request.htm -----------------
+*/
+var url=location.search;
+var Request = new Object();
+if(url.indexOf("?")!=-1)
+{
+	var str = url.substr(1) //去掉?号
+	strs = str.split("&");
+	for(var i=0;i<strs.length;i++)
+	{
+		Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+	}
+}
+
+</script>
+
+<SCRIPT Language=JavaScript>
+
+var oRange
+
+var oElem;
+
+
+
+var sUrl = "http://";
+
+var sProtocol = "http://";
+
+var sClass = "akey";
+
+var sTarget = "_blank";
+
+var sPrompt = "";
+
+
+
+//oRange = window.dialogArguments[0];
+
+//oElem = window.dialogArguments[1];
+
+/*
+
+if (oElem.tagName.toUpperCase() == "A") {
+
+	sUrl = oElem.getAttribute("href",2);
+
+	sProtocol = getProtocol(sUrl);
+
+	sClass = oElem.getAttribute("className");
+
+	sTarget = oElem.getAttribute("target",2);
+
+	sPrompt = oElem.getAttribute("title");
+
+}
+
+
+
+*/
+
+// 去空格，left,right,all可选
+/*
+
+function BaseTrim(str)
+
+{
+
+	lIdx=0;
+
+	rIdx=str.length;
+
+	if (BaseTrim.arguments.length==2)
+
+		act=BaseTrim.arguments[1].toLowerCase();
+
+	else
+
+	    act="all";
+
+    for(var i=0;i<str.length;i++){
+
+		thelStr=str.substring(lIdx,lIdx+1);
+
+		therStr=str.substring(rIdx,rIdx-1);
+
+		if ((act=="all" || act=="left") && thelStr==" "){
+
+			lIdx++;
+
+        }
+
+        if ((act=="all" || act=="right") && therStr==" "){
+
+			rIdx--;
+
+		}
+
+	}
+
+	str=str.slice(lIdx,rIdx);
+
+    return str;
+
+}
+
+*/
+
+
+
+// 搜索下拉框值与指定值匹配，并选择匹配项
+
+function SearchSelectValue(o_Select, s_Value)
+
+{
+
+	for (var i=0;i<o_Select.length;i++) {
+
+		if (o_Select.options[i].value == s_Value) {
+
+			o_Select.selectedIndex = i;
+
+			return true;
+
+		}
+
+	}
+
+	return false;
+
+}
+
+
+
+// 从地址取协议
+
+function getProtocol(url)
+
+{
+
+	return url.replace(/(.+:\/*)(.*)/gi,"$1");
+
+}
+
+
+
+// 改变协议
+
+function changeProtocol(index){
+
+	sProtocol = type.options[index].value;
+
+	sUrl = path.value;
+
+	sUrl = sUrl.replace(/(.+:\/*)/gi, "");
+
+	path.value = sProtocol + sUrl;
+
+}
+
+
+
+
+
+// 初始值
+
+function InitDocument(){
+
+	/**/SearchSelectValue(type, sProtocol.toLowerCase());
+
+	SearchSelectValue(target, sTarget.toLowerCase());
+
+	path.value = sUrl;
+
+	cls.value = sClass;
+
+	prmpt.value = sPrompt;
+
+	cls.focus();
+
+	cls.select();
+	
+
+}
+
+
+
+</SCRIPT>
+
+
+
+<SCRIPT language=JavaScript>
+
+function resteText() {
+	
+	sUrl = path.value;
+
+	var s = sUrl;
+
+	s = s.replace(/(.+:\/*)/gi, "");
+
+	//s = BaseTrim(s);
+
+	
+
+	if (s=="")
+
+	{
+
+		alert("Please input file url");
+		return;
+
+	}
+	var win = window.dialogArguments;
+	var iframeid=Request["iframeid"];
+
+	var editor=win.document.getElementById(iframeid).contentWindow;
+	var sPath = path.value;
+	var sClass = cls.value;	
+	var sTarget = target.options[target.options.selectedIndex].value;
+	var sPrompt = prmpt.value;
+	var rng;	
+	var txt;
+	var selection;
+	var editor=win.document.getElementById(iframeid).contentWindow;
+	if(win.isIE){
+
+	    selection = editor.document.selection; 
+			
+		if (selection != null) {
+			rng = selection.createRange();
+		}
+		var elm=rng.item?rng.item(0):rng.parentElement();
+		var p=elm;
+		while(p.tagName.toLowerCase()!='a'&&p.tagName.toLowerCase()!='body'){
+			p=p.parentNode;
+		}
+		if(p.tagName.toLowerCase()=='a'){
+			return;
+		}else{
+			if(rng.text==""){
+				txt =  sPath;
+			}else{
+				if(rng.item){
+					txt=rng.item(0).outerHTML;
+				}else{
+					txt=rng.htmlText;
+				}
+			}
+		}
+	
+	}
+	else{
+		selection=editor.getSelection();
+		if(selection.rangeCount>0){
+			rng=selection.getRangeAt(0);
+		}
+	
+		txt = rng+'' ? rng : sPath;
+	}
+
+
+
+	var str = "<A";		
+	if (sClass != ""){
+		str += " class=\"" + sClass + "\"";
+	}
+	str += " href=\"" + sPath + "\"";			
+	if (sPrompt != ""){
+		str += " title=\"" + sPrompt + "\"";
+	}
+	if (sTarget != ""){
+		str += " target=\"" + sTarget + "\"";
+	}
+	str += ">" + txt + "</A>";
+	
+	var designEditorDoc=editor.document;
+	if(win.isIE) {
+			var rng=designEditorDoc.selection.createRange();
+		if(designEditorDoc.selection.type.toLowerCase()=="control"){
+			try{
+				var tg=designEditorDoc.body.createTextRange();
+				tg.moveToElementText(rng.item(0));
+				rng=tg;
+			}catch(e){}
+		}
+	
+		rng.pasteHTML(str);
+			//var html = "<a href='" + $("linkpath").value + "' target='_blank'>" + $("linktext").value + "</a>";
+			
+			
+			rng.collapse(false);
+			rng.select();
+		
+	}
+	else {
+		editor.document.execCommand("inserthtml",null,str);
+	}
+	editor.focus();
+	window.close();
+
+
+
+/*
+
+	var oSel = editor.document.selection;
+	var oRange = oSel.createRange();
+	var oElem = (oSel.type == "Control") ? oRange(0) : oRange.parentElement();
+	var sTag = oElem.tagName.toUpperCase();
+
+		sPath = path.value;
+		sClass = cls.value;	
+		sTarget = target.options[target.options.selectedIndex].value;
+		sPrompt = prmpt.value;		
+
+		var str = "<A";		
+		if (sClass != ""){
+			str += " class=\"" + sClass + "\"";
+		}
+		str += " href=\"" + sPath + "\"";			
+		if (sPrompt != ""){
+			str += " title=\"" + sPrompt + "\"";
+		}
+		if (sTarget != ""){
+			str += " target=\"" + sTarget + "\"";
+		}
+		str += ">" + txt + "</A>";
+		var txt;
+		if (oSel.type == "Control") {
+			if (sTag == "IMG") {
+				txt = oElem.outerHTML;
+				str += ">" + txt + "</A>";
+				oElem.outerHTML = str;
+			}
+		} else {
+			if (sTag == "A") {
+				txt = oElem.innerText;
+				oElem.outerHTML = "";
+			} else {
+				txt = oRange.htmlText;
+				if (txt == "") {
+					txt = sPath;
+				}		
+			}
+			
+			str += ">" + txt + "</A>";
+			oRange.pasteHTML(str);
+		}
+			//var frameWindow = editor.iframe.contentWindow;
+			//var selection = frameWindow.document.selection; 
+			//if (selection != null) {
+			//	rng = selection.createRange();
+			//}
+			//$("linktext").value = rng.text ? rng.text : "";
+			*/
+		
+}
+
+</SCRIPT>
+
+
+
+<BODY bgcolor="" onload="InitDocument()">
+
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=10 align=center style="padding-left:10px;" width="288" >
+
+  <TBODY>
+
+  <TR>
+
+    <TD align=middle width="258">
+
+    <font class=title>Insert Hyperlink</font><hr width=100% >
+
+    </TD>
+
+    </TR>
+
+<TR>
+
+    <TD align=middle width="258">
+
+    <p align="left">Tpye:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <select id=type onchange="changeProtocol(this.selectedIndex)">
+
+    <option value="">(其它)</option>
+
+    <option value="file://">file:</option>
+
+    <option value="ftp://">ftp:</option>
+
+    <option value="gopher://">gopher:</option>
+
+    <option value="http://" selected>http:</option>
+
+    <option value="https://">https:</option>
+
+    <option value="mailto:">mailto:</option>
+
+    <option value="news:">news:</option>
+
+    <option value="telnet:">telnet:</option>
+
+    <option value="wais:">wais:</option>
+
+    </select></TD></TR>
+
+<TR>
+
+    <TD align=middle width="258">
+
+		<p align="left">Url:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+		<INPUT id=path size=32 value="">
+
+    </TD>
+</TR>
+
+<TR>
+
+    <TD align=middle width="258">
+
+    <p align="left">class=&nbsp;&nbsp;&nbsp; 
+
+    <INPUT id=cls size=32 value="">
+
+    </TD>
+</TR>
+
+  <TR>
+
+    <TD align=middle width="258">
+
+    <p align="left">Target:&nbsp;&nbsp;&nbsp; <select id=target>
+
+    <option value="">网页默认值(无)</option>
+
+    <option value="_self">相同框架(_self)</option>
+
+    <option value="_top">整页(_top)</option>
+
+    <option value="_blank" selected>新建窗口(_blank)</option>
+
+    <option value="_parent">父框架(_parent)</option>
+
+    </select></TD></TR>
+
+  <TR>
+
+    <TD align=middle width="258">
+
+    <p align="left">Prompt:&nbsp;
+
+    <INPUT id=prmpt size=32 value="">
+
+    </TD></TR>
+
+  <TR>
+
+    <TD align=middle width="258"><hr width=100% >
+
+    </TD></TR>
+
+  <TR>
+
+    <TD align=middle width="258"><input id=Ok 
+
+      type=button onclick="resteText(); " value="OK" /> &nbsp;<input type='button' 
+
+  onclick=window.close(); value='Cancel' /></TD></TR></TBODY></TABLE>
+
+<SCRIPT>
+	document.onkeydown=function()
+{
+    if (event.keyCode == 13)
+    {
+    
+       resteText();
+    }
+  }
+	</SCRIPT>
+
+</BODY></HTML>
+
+
