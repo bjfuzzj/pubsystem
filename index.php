@@ -185,8 +185,11 @@ function checkForm_register(thisform)
 
 </td>
 
+
 <td width=1 bgcolor=#cccccc></td>
 
+
+<!--
 <td align=right>
 
 
@@ -237,6 +240,7 @@ function checkForm_register(thisform)
 </form>
 
 </td>
+-->
 </tr>
 
 </table>
