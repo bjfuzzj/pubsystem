@@ -4,8 +4,9 @@ $cgi =  getCGI();
 
 $admin=$cgi["admin"];
 $pwd=$cgi['pwd'];
+$g_code=$cgi['g_code'];
 if($admin == "" || $pwd  == "") sys_exit("参数错误");
-$sqlstr ="select id, login, name, type, priv, allproj,  passwd, salt from user where login='$admin'";
+$sqlstr ="select id, login, name, type, priv, allproj,  passwd,secret, salt from user where login='$admin'";
 $res = mysql_query($sqlstr, $pub_mysql) or sys_exit("系统忙， 请稍候再试。", $sqlstr . ":\n" . mysql_error());
 $row_user = mysql_fetch_array($res, MYSQL_ASSOC);
 
@@ -24,6 +25,17 @@ if(md5($pwd.$salt) != $db_pwd)
 	$sqlstr = "update user set f_times=f_times+1 where login='$admin'";
 	$res = mysql_query($sqlstr, $pub_mysql) or sys_exit("系统忙， 请稍候再试。", $sqlstr . ":\n" . mysql_error());
 	sys_exit("用户 $admin 密码错误");
+}
+//  google-authenticator 验证
+$ga= new PHPGangsta_GoogleAuthenticator();
+$db_secret=$row_user['secret'];
+//$one_code = $ga->getCode($db_secret); //服务端计算"一次性验证码"
+$checkResult = $ga->verifyCode($db_secret, $g_code, 2);
+if(!$checkResult)
+{
+	$sqlstr = "update user set f_times=f_times+1 where login='$admin'";
+	$res = mysql_query($sqlstr, $pub_mysql) or sys_exit("系统忙， 请稍候再试。", $sqlstr . ":\n" . mysql_error());
+	sys_exit("用户验证码错误");
 }
 
 $ck_u_priv = "";

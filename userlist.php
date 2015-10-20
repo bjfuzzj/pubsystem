@@ -8,13 +8,16 @@ $nav_str .= " &gt 用户列表";
 $userlist = "";
 $sqlstr = "select * from user order by id desc";
 $res = mysql_query($sqlstr, $pub_mysql) or sys_exit("系统忙， 请稍候再试。", $sqlstr . ":\n" . mysql_error());
+$ga = new PHPGangsta_GoogleAuthenticator();
 while($row = mysql_fetch_array($res) )
 {
 	$u_id = $row[id];
 	$u_name = $row[name];
-	$login = $row[login];
-
-	$userlist .= sprintf("<tr height=27><td><input type=radio name=u_id value=\"%s\"></td><td>%s</td><td><a href=\"edituser.php?u_id=%s\">%s</a>(%s)</td></tr>\n", $u_id, $u_id, $u_id, $u_name, $login);
+    $login = $row[login];
+    $secret=$row['secret'];
+    $ga->getQRCodeGoogleUrl('www.17co8.com',$secret,$u_id);
+    $imgstr='/images/'.$u_id.".png";
+	$userlist .= sprintf("<tr height=27><td><input type=radio name=u_id value=\"%s\"></td><td>%s</td><td><a href=\"edituser.php?u_id=%s\">%s</a>(%s)</td><td><img src=\"%s\"></td></tr>\n", $u_id, $u_id, $u_id, $u_name, $login,$imgstr);
 }
 
 

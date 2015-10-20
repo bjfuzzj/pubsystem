@@ -17,7 +17,11 @@ $type = $cgi[type];
 
 if($username && $login && $type && $passwd)
 {
-	$sqlstr = sprintf("insert into user set name='%s', login='%s', passwd='%s', type='%s', note='%s',c_id=%s, createdt=now()",  $username, $login, $passwd, $type, $note, $ck_u_id);
+    $salt=getSalt();
+    $passwd=md5($passwd.$salt);
+    $ga= new PHPGangsta_GoogleAuthenticator();
+    $secret = $ga->createSecret();
+	$sqlstr = sprintf("insert into user set name='%s', login='%s', passwd='%s', type='%s', note='%s',c_id=%s,secret='%s',salt='%s',createdt=now()",  $username, $login, $passwd, $type, $note, $ck_u_id,$secret,$salt);
 
 	$res = mysql_query($sqlstr, $pub_mysql) or exit(mysql_error() . "\n" . $sqlstr);
 	header("Location: userlist.php");

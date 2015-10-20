@@ -74,6 +74,13 @@ function checkForm_login(thisform)
 		thisform.pwd.focus();
 		return false;
 	}
+
+	if(thisform.g_code.value == "")
+	{
+		alert('code不能为空');
+		thisform.g_code.focus();
+		return false;
+	}
 	return true;
 }
 
@@ -173,6 +180,12 @@ function checkForm_register(thisform)
 <tr height="40">
 <td height="30" align="right"><b>密　码:</b></td>
 <td><input type=password name=pwd size=40></td>
+<td/>
+</tr>
+
+<tr height="40">
+<td height="30" align="right"><b>Code :</b></td>
+<td><input type=text name=g_code size=40></td>
 <td/>
 </tr>
 
