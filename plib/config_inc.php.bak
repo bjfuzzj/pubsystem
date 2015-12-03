@@ -1,0 +1,62 @@
+<?php
+error_reporting(1);
+/*
+//数据库连接参数
+define('DB_HOST', "localhost:/tmp/mysql3333.sock");
+define('DB_USER', "publish");
+define('DB_PASS', "pub54321");
+define('DB_NAME', "pub_main");
+*/
+
+define('DB_HOST', "localhost");
+define('DB_USER', "root");
+define('DB_PASS', "");
+define('DB_NAME', "pub_main");
+
+
+//数据库字符编码
+define('DB_CHARSET', 'utf8');
+
+//HTML输出页面字符编码
+define('HTML_CHARSET', "utf-8");
+
+//临时文件存放路径
+define('TMP_PATH', '/tmp');
+
+//发布系统的安装路径
+$root_path = "D:/wamp/apps/pub";
+//$root_path = "D:/Program Files/Apache Software Foundation/Apache2.2/htdocs/pub4";
+
+//发布生成页面的默认存放路径
+//$file_base = "/data4/gen8";
+$file_base = "D:/wamp/apps/zhaolicai";
+
+//$file_base = "D:/Program Files/Apache Software Foundation/Apache2.2/htdocs";
+
+
+
+//---------------------- 下面的参数不要改 --------------------------
+
+$is_window = 0;
+if(strpos(strtoupper(PHP_OS), 'WIN') === 0) $is_window = 1;
+
+$proj_data = "";
+$poly_data = array();
+$temp_data = array();
+$tempdef_data = array();
+$global_data = array();
+
+
+$pub_mysql = "";
+$proj_mysql = "";
+$db_name = "";
+
+$pre_field="field_value_of_ghc_";
+$page_split_mark ="[page ======================================================================== split]";
+$this_doc = "";
+$eval_Table = "";
+$async_buf = "";
+
+
+
+?>

