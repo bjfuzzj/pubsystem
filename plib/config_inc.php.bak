@@ -3,8 +3,8 @@ error_reporting(1);
 /*
 //数据库连接参数
 define('DB_HOST', "localhost:/tmp/mysql3333.sock");
-define('DB_USER', "publish");
-define('DB_PASS', "pub54321");
+define('DB_USER', "");
+define('DB_PASS', "");
 define('DB_NAME', "pub_main");
 */
 

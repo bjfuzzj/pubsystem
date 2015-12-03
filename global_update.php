@@ -10,7 +10,7 @@ conProjDB($p_id);
 gsql_esc($cgi);
 $sqlstr = sprintf("update  global set name='%s', content='%s', type='$cgi[gtype]' where id=$id", $cgi[cname], $cgi[content]);
 $res = mysql_query($sqlstr, $proj_mysql) or sys_exit("系统忙， 请稍候再试。", $sqlstr . ":\n" . mysql_error());
-//gen_global();
+gen_global();
 sys_jmp("globallist.php?p_id=$p_id");
 
 ?>
